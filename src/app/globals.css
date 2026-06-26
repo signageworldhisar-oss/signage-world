@@ -2,25 +2,87 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #121212;
+  
+  --color-charcoal: #121212;
+  --color-charcoal-light: #1F1F1F;
+  --color-accent: #FF5B00;
+  --color-accent-hover: #E04F00;
+  --color-surface-light: #F9FAFB;
+  --color-border-light: #E5E7EB;
+  --color-muted: #4B5563;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-light: var(--color-charcoal-light);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-surface-light: var(--color-surface-light);
+  --color-border-light: var(--color-border-light);
+  --color-muted: var(--color-muted);
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Section scroll margins */
+section {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Custom UI enhancements */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 12px rgba(255, 91, 0, 0.3);
+}
+
+.box-shadow-glow {
+  box-shadow: 0 4px 20px -2px rgba(255, 91, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-blink {
+  animation: blink 2s infinite ease-in-out;
+}
+
