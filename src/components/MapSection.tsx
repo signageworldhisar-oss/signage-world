@@ -3,10 +3,11 @@
 import Button from "@/components/Button";
 
 export default function MapSection() {
-  const address = "Next to Hyundai Showroom, Main Hero Honda Chowk, NH-08, Gurgaon, Haryana 122001";
+  const address =
+    "Shop No. 1337, Police Choki, Mohalla Sainiyan, Hisar, Haryana — 125001";
   
   return (
-    <section id="location" className="py-20 bg-white border-t border-border-light">
+    <section id="location" className="py-12 md:py-20 bg-white border-t border-border-light">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Section Header */}
@@ -18,7 +19,7 @@ export default function MapSection() {
             Visit Our Main Workshop
           </h2>
           <p className="text-base text-muted leading-relaxed">
-            Come visit our main production facility in Gurgaon to see samples, discuss your custom fabrication designs, or review materials with our signage experts.
+            Come visit our main production workshop in Hisar to see samples, discuss your custom fabrication designs, or review materials with our signage experts.
           </p>
         </div>
 
@@ -91,7 +92,7 @@ export default function MapSection() {
                   <div>
                     <h4 className="text-[13px] font-bold text-charcoal uppercase tracking-wider">Helpline</h4>
                     <p className="text-sm text-muted mt-1 font-medium">
-                      <a href="tel:+919999460724" className="hover:text-accent transition-colors">+91 99994 60724</a>
+                      <a href="tel:+918295567765" className="hover:text-accent transition-colors">+91 82955 67765</a>
                     </p>
                   </div>
                 </li>
@@ -102,7 +103,7 @@ export default function MapSection() {
               <Button
                 href="https://www.google.com/maps/place/Galaxy+Signage/@28.4357732,77.0136512,17z/data=!3m1!4b1!4m6!3m5!1s0x390d1858a74e183b:0x217d12f4585c544d!8m2!3d28.4357732!4d77.0162261!16s%2Fg%2F11b6g58231"
                 target="_blank"
-                variant="dark"
+                variant="primary"
                 size="md"
                 rounded="xl"
                 className="w-full flex items-center justify-center gap-2 group"

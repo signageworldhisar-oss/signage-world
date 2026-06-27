@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -26,7 +29,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-white text-charcoal font-sans" suppressHydrationWarning>
+        <Navbar />
         {children}
+        <Footer />
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );

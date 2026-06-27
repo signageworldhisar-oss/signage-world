@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Portfolio from "@/components/Portfolio";
@@ -8,25 +7,20 @@ import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
 import SEOSection from "@/components/SEOSection";
 import MapSection from "@/components/MapSection";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main className="flex-grow">
-        {/* Sections in reference website flow */}
-        <Hero />
-        <Portfolio />
-        <WhyChooseUs />
-        <Services />
-        <Process />
-        <Reviews />
-        <Contact />
-        <SEOSection />
-        <MapSection />
-      </main>
-      <Footer />
+      {/* Sections in reference website flow */}
+      <Hero />
+      <SEOSection />
+      <Portfolio />
+      <WhyChooseUs />
+      <Services />
+      <Process />
+      <Reviews />
+      <Contact />
+      <MapSection />
     </>
   );
 }

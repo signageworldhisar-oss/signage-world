@@ -9,13 +9,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Why Us", href: "#why-choose-us" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Services", href: "#services" },
-    { name: "Our Process", href: "#process" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Why Us", href: "/#why-choose-us" },
+    { name: "Portfolio", href: "/#portfolio" },
+    { name: "Services", href: "/#services" },
+    { name: "Our Process", href: "/#process" },
+    { name: "Reviews", href: "/#reviews" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -48,7 +48,12 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center">
-          <Button href="#contact" size="sm" rounded="full" className="font-semibold">
+          <Button
+            href="#contact"
+            size="sm"
+            rounded="full"
+            className="font-semibold"
+          >
             Get Free Quote
           </Button>
         </div>
@@ -87,8 +92,10 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed top-[72px] left-0 right-0 bg-white border-t border-border-light shadow-xl p-6 transition-all duration-300 lg:hidden origin-top ${
-          isOpen ? "opacity-100 translate-y-0 scale-y-100" : "opacity-0 -translate-y-4 scale-y-0 pointer-events-none"
+        className={`fixed top-[61px] left-0 right-0 bg-white border-t border-border-light shadow-xl p-6 transition-all duration-300 lg:hidden origin-top ${
+          isOpen
+            ? "opacity-100 translate-y-0 scale-y-100"
+            : "opacity-0 -translate-y-4 scale-y-0 pointer-events-none"
         }`}
       >
         <nav className="flex flex-col gap-4">

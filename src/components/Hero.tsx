@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-28 pb-16 flex items-center overflow-hidden bg-charcoal"
+      className="relative min-h-screen pt-25 sm:pt-28 pb-16 flex items-center overflow-hidden bg-charcoal"
     >
       {/* Background Image Carousel (Full Screen & Highly Visible) */}
       <div className="absolute inset-0 z-0">
@@ -47,19 +47,16 @@ export default function Hero() {
           </div>
         ))}
         {/* Dark gradient overlay for high text legibility on the left side */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/55 to-transparent pointer-events-none" />
       </div>
 
       {/* Hero Content (Left-aligned Overlay matching screenshot format) */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex flex-col items-start text-left">
         
-        {/* Top supporting tag styled as a dark capsule pill
-        <span className="inline-block bg-white/10 backdrop-blur-md text-white border border-white/20 font-bold text-[10px] uppercase tracking-widest px-5 py-2 rounded-full mb-6 animate-fade-in-up">
-          Serving Businesses, Retail Stores, Offices & Commercial Projects
-        </span> */}
+       
 
         {/* Left-Aligned Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6 max-w-4xl animate-fade-in-up">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-4 sm:mb-6 max-w-4xl animate-fade-in-up">
           Custom Signage Solutions That Make Your{" "}
           <span className="text-accent text-shadow-glow">
             Brand Stand Out
@@ -77,7 +74,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-10 w-full sm:w-auto animate-fade-in-up [animation-delay:200ms]">
           <Button
             href="#contact"
-            variant="white"
+            variant="primary"
             size="md"
             rounded="full"
             className="w-full sm:w-auto shadow-lg"

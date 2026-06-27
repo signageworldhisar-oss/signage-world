@@ -1,5 +1,7 @@
 "use client";
 
+import FeatureCard from "@/components/common/FeatureCard";
+
 export default function WhyChooseUs() {
   const features = [
     {
@@ -59,7 +61,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" className="py-24 bg-surface-light relative">
+    <section id="why-choose-us" className="py-12 md:py-24 bg-surface-light relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
@@ -78,25 +80,12 @@ export default function WhyChooseUs() {
         {/* Feature Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feat, index) => (
-            <div
+            <FeatureCard
               key={index}
-              className="glassmorphism p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-1 transition-all duration-300 group"
-            >
-              {/* Icon Container */}
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                {feat.icon}
-              </div>
-
-              {/* Title */}
-              <h3 className="text-lg font-bold text-charcoal mb-3 group-hover:text-accent transition-colors duration-200">
-                {feat.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm md:text-base text-muted leading-relaxed font-normal">
-                {feat.description}
-              </p>
-            </div>
+              title={feat.title}
+              description={feat.description}
+              icon={feat.icon}
+            />
           ))}
         </div>
 

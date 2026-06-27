@@ -63,9 +63,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="footer" className="bg-charcoal text-white/95 pt-20 pb-10 relative">
+    <footer
+      id="footer"
+      className="bg-charcoal text-white/95 pt-20 pb-10 relative"
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
-        
         {/* Column 1: Brand Info */}
         <div className="lg:col-span-4 flex flex-col justify-between">
           <div>
@@ -79,11 +81,15 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-white/60 leading-relaxed mb-6 max-w-sm">
-              {"Signage World is one of India's premier modular signage and retail display fabrication experts. We construct durable signage products that scale business visibility."}
+              {
+                "Signage World is one of India's premier modular signage and retail display fabrication experts. We construct durable signage products that scale business visibility."
+              }
             </p>
           </div>
           <div>
-            <h5 className="text-xs font-extrabold uppercase tracking-widest text-accent mb-4">Follow Us</h5>
+            <h5 className="text-xs font-extrabold uppercase tracking-widest text-accent mb-4">
+              Follow Us
+            </h5>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
@@ -103,7 +109,9 @@ export default function Footer() {
 
         {/* Column 2: Quick Links */}
         <div className="lg:col-span-2">
-          <h4 className="text-sm font-black uppercase tracking-wider text-accent mb-6">Company</h4>
+          <h4 className="text-sm font-black uppercase tracking-wider text-accent mb-6">
+            Company
+          </h4>
           <ul className="space-y-3.5">
             {quickLinks.map((link) => (
               <li key={link.name}>
@@ -120,7 +128,9 @@ export default function Footer() {
 
         {/* Column 3: Services Links */}
         <div className="lg:col-span-3">
-          <h4 className="text-sm font-black uppercase tracking-wider text-accent mb-6">Services</h4>
+          <h4 className="text-sm font-black uppercase tracking-wider text-accent mb-6">
+            Services
+          </h4>
           <ul className="space-y-3.5">
             {serviceLinks.map((link, idx) => (
               <li key={idx}>
@@ -137,54 +147,107 @@ export default function Footer() {
 
         {/* Column 4: Contact details */}
         <div className="lg:col-span-3">
-          <h4 className="text-sm font-black uppercase tracking-wider text-accent mb-6">Contact Us</h4>
+          <h4 className="text-sm font-black uppercase tracking-wider text-accent mb-6">
+            Contact Us
+          </h4>
           <ul className="space-y-4">
             <li className="flex gap-3">
-              <svg className="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              <svg
+                className="w-5 h-5 text-accent shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
               </svg>
               <div>
-                <h5 className="text-[13px] font-bold text-white uppercase tracking-wide">Main Workshop</h5>
+                <h5 className="text-[13px] font-bold text-white uppercase tracking-wide">
+                  Main Workshop
+                </h5>
                 <p className="text-xs text-white/60 mt-1 leading-relaxed">
-                  Next to Hyundai Showroom, Main Hero Honda Chowk, NH-08, Gurgaon, Haryana 122001
+                  Shop No. 1337, Police Choki, Mohalla Sainiyan,
+                  Hisar, Haryana — 125001
                 </p>
               </div>
             </li>
             <li className="flex gap-3">
-              <svg className="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              <svg
+                className="w-5 h-5 text-accent shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
               </svg>
               <div>
-                <h5 className="text-[13px] font-bold text-white uppercase tracking-wide">Helplines</h5>
+                <h5 className="text-[13px] font-bold text-white uppercase tracking-wide">
+                  Helplines
+                </h5>
                 <p className="text-xs text-white/60 mt-1 leading-relaxed">
-                  <a href="tel:+919999460724" className="hover:text-white">+91 99994 60724</a> <br />
-                  <a href="tel:+919891276777" className="hover:text-white">+91 98912 76777</a>
+                  <a href="tel:+918295567765" className="hover:text-white">
+                    +91 82955 67765
+                  </a>{" "}
+                  <br />
+                  <a href="tel:+919891276777" className="hover:text-white">
+                    +91 98912 76777
+                  </a>
                 </p>
               </div>
             </li>
             <li className="flex gap-3">
-              <svg className="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <svg
+                className="w-5 h-5 text-accent shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
               </svg>
               <div>
-                <h5 className="text-[13px] font-bold text-white uppercase tracking-wide">Sales Email</h5>
+                <h5 className="text-[13px] font-bold text-white uppercase tracking-wide">
+                  Sales Email
+                </h5>
                 <p className="text-xs text-white/60 mt-1">
-                  <a href="mailto:sales@signageworld.co" className="hover:text-white">sales@signageworld.co</a>
+                  <a
+                    href="mailto:sales@signageworld.co"
+                    className="hover:text-white"
+                  >
+                    sales@signageworld.co
+                  </a>
                 </p>
               </div>
             </li>
           </ul>
         </div>
-
       </div>
 
       {/* Footer Bottom Credentials */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/40">
         <div>
-          <span className="font-bold text-white/60">An ISO 9001:2015 Certified Manufacturing Facility</span>
+          <span className="font-bold text-white/60">
+            An ISO 9001:2015 Certified Manufacturing Facility
+          </span>
         </div>
         <div>
-          <p>&copy; {new Date().getFullYear()} Signage World. All rights reserved. Designed for high conversion.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Signage World. All rights
+            reserved. Designed for high conversion.
+          </p>
         </div>
       </div>
     </footer>
