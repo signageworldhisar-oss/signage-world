@@ -101,9 +101,7 @@ export default function ContactPage() {
             Back to Home
           </Link>
           
-          <span className="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full">
-            Contact &amp; Quotes
-          </span>
+  
           <h1 className="text-3xl md:text-5xl font-black tracking-tight mt-4 mb-4">
             Get a Custom Quote
           </h1>

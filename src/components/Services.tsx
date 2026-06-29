@@ -26,6 +26,12 @@ export default function Services() {
       description:
         "High-resolution, durable banner and flex prints. Perfect for outdoor billboards, exhibitions, hoarding signs, and large-scale marketing displays.",
       image: "/images/office-photos/flex-printing.jpeg",
+      images: [
+        "/images/office-photos/flex-printing.jpeg",
+        "/images/project-8.jpeg",
+        "/images/project-18.jpeg",
+        "/images/shop-flex-board.jpeg"
+      ],
       icon: <IconFlexPrinting className="w-5 h-5 text-accent" />,
     },
     {
@@ -34,6 +40,12 @@ export default function Services() {
       description:
         "Energy-efficient, bright 3D illuminated letters and channel boards. Custom front-lit, back-lit (halo effect), and neon signs with premium LED modules.",
       image: "/images/project-18.jpeg",
+      images: [
+        "/images/project-18.jpeg",
+        "/images/glowing-board.jpeg",
+        "/images/glowing-board-2.jpeg",
+        "/images/glowing-board-3.jpeg"
+      ],
       icon: <IconLEDBoard className="w-5 h-5 text-accent" />,
     },
     {
@@ -42,6 +54,12 @@ export default function Services() {
       description:
         "Laser-cut premium solid acrylic letters, logo plaques, and corporate signs. Elegant design ideal for receptions, boardrooms, and indoor branding.",
       image: "/images/project-5.jpeg",
+      images: [
+        "/images/project-5.jpeg",
+        "/images/name-plate.jpeg",
+        "/images/name-plate-2.jpeg",
+        "/images/name-plate-4.jpeg"
+      ],
       icon: <IconAcrylicSignage className="w-5 h-5 text-accent" />,
     },
     {
@@ -50,6 +68,12 @@ export default function Services() {
       description:
         "Premium Aluminium Composite Panel cladding and route-cut signs. Exceptionally durable, weather-resistant, and perfect for modern storefront facades.",
       image: "/images/project-3.jpeg",
+      images: [
+        "/images/project-3.jpeg",
+        "/images/acp-work-1.jpeg",
+        "/images/acp-work-2.jpeg",
+        "/images/acp-work-3.jpeg"
+      ],
       icon: <IconACPBoard className="w-5 h-5 text-accent" />,
     },
     {
@@ -58,6 +82,12 @@ export default function Services() {
       description:
         "Custom high-quality vinyl wrapping for commercial fleets, delivery vehicles, and cars. Turn your vehicles into mobile billboards with weather-proof branding.",
       image: "/images/project-1.jpeg",
+      images: [
+        "/images/project-1.jpeg",
+        "/images/project-8.jpeg",
+        "/images/project-18.jpeg",
+        "/images/flex-work.jpeg"
+      ],
       icon: <IconVehicleWrap className="w-5 h-5 text-accent" />,
     },
     {
@@ -66,6 +96,12 @@ export default function Services() {
       description:
         "Illuminated double-sided lightboxes, vacuum-formed glow boards, and signs. High-visibility promotion for shops and showrooms both day and night.",
       image: "/images/project-11.jpeg",
+      images: [
+        "/images/project-11.jpeg",
+        "/images/glowing-board-4.jpeg",
+        "/images/glowing-board-5.jpeg",
+        "/images/glowing-board-6.jpeg"
+      ],
       icon: <IconGlowSign className="w-5 h-5 text-accent" />,
     },
   ];
@@ -96,11 +132,6 @@ export default function Services() {
             modules={[Autoplay, Pagination, Navigation]}
             spaceBetween={20}
             slidesPerView={1}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
             pagination={{
               clickable: true,
               el: ".services-pagination",

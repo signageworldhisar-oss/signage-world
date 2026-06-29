@@ -20,6 +20,7 @@ export interface ServiceData {
     [key: string]: string | undefined;
   };
   applications: string[];
+  gallery?: string[];
 }
 
 export const serviceDetails: Record<string, ServiceData> = {
@@ -28,7 +29,7 @@ export const serviceDetails: Record<string, ServiceData> = {
     subtitle: "High-Quality Flex Printing Services",
     pdfText: "Create eye-catching advertising materials with premium flex printing for shops, events, exhibitions, promotions, and outdoor branding.",
     extendedDescription: "Our high-resolution, durable flex and banner prints are perfect for large-scale marketing displays. We use advanced solvent and eco-solvent printing technologies to deliver vibrant colors and sharp details that withstand harsh weather conditions.",
-    image: "/images/project-8.jpeg",
+    image: "/images/flex-printing.jpeg",
     icon: <IconFlexPrinting className="w-8 h-8 text-accent" />,
     features: [
       "Ultra High-Resolution Printing",
@@ -49,6 +50,11 @@ export const serviceDetails: Record<string, ServiceData> = {
       "Retail Shop Front Banners",
       "Event & Promotional Standees",
       "Street Pole Banners",
+    ],
+    gallery: [
+      "/images/office-photos/flex-printing.jpeg",
+      "/images/project-8.jpeg",
+      "/images/project-18.jpeg"
     ]
   },
   "led-boards": {
@@ -77,6 +83,12 @@ export const serviceDetails: Record<string, ServiceData> = {
       "Showroom Accent Exterior Signs",
       "Indoor Reception Branding",
       "Corporate Headquarters Signage",
+    ],
+    gallery: [
+      "/images/project-18.jpeg",
+      "/images/project-20.jpeg",
+      "/images/project-17.jpeg",
+      "/images/project-22.jpeg"
     ]
   },
   "acrylic-signage": {
@@ -105,6 +117,12 @@ export const serviceDetails: Record<string, ServiceData> = {
       "Upscale Boutiques & Retail Interiors",
       "Wayfinding & Directional Indoor Signs",
       "Exhibition Logo Displays",
+    ],
+    gallery: [
+      "/images/project-5.jpeg",
+      "/images/project-11.jpeg",
+      "/images/project-13.jpeg",
+      "/images/project-15.jpeg"
     ]
   },
   "acp-boards": {
@@ -133,6 +151,13 @@ export const serviceDetails: Record<string, ServiceData> = {
       "Pylon Signages & Totems",
       "Industrial Park Directory Boards",
       "Petrol Pump Canopy Graphics",
+    ],
+    gallery: [
+      "/images/acp-work-1.jpeg",
+      "/images/acp-work-2.jpeg",
+      "/images/acp-work-3.jpeg",
+      "/images/acp-work-4.jpeg",
+      "/images/acp-work-5.jpeg"
     ]
   },
   "vehicle-wraps": {
@@ -161,6 +186,11 @@ export const serviceDetails: Record<string, ServiceData> = {
       "Company Car Door Logos & Decals",
       "Food Truck Visual Wrap Graphics",
       "Public Transit Bus Wraps",
+    ],
+    gallery: [
+      "/images/project-1.jpeg",
+      "/images/project-8.jpeg",
+      "/images/project-18.jpeg"
     ]
   },
   "glow-signs": {
@@ -189,6 +219,13 @@ export const serviceDetails: Record<string, ServiceData> = {
       "Mall Corridor & Under-Canopy Signs",
       "Restaurant Menu Boards & Lightboxes",
       "High-Street Retail Shop Outlets",
+    ],
+    gallery: [
+      "/images/project-11.jpeg",
+      "/images/project-20.jpeg",
+      "/images/project-10.jpeg",
+      "/images/project-16.jpeg",
+      "/images/project-13.jpeg",
     ]
   }
 };

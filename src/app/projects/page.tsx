@@ -92,10 +92,9 @@ export default function ProjectsPage() {
               </svg>
               Back to Home
             </Link>
-            {/* <span className="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full">
-              Full Portfolio
-            </span> */}
-            <h1 className="text-3xl md:text-5xl font-black tracking-tight mt-4 mb-4">
+           
+                      
+             <h1 className="text-3xl md:text-5xl font-black tracking-tight mt-4 mb-4">
               All Our Projects
             </h1>
             <p className="text-white/60 text-sm md:text-lg max-w-2xl leading-relaxed">
