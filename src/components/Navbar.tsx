@@ -11,11 +11,11 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Why Us", href: "/#why-choose-us" },
-    { name: "Portfolio", href: "/#portfolio" },
+    { name: "Portfolio", href: "/projects" },
     { name: "Services", href: "/#services" },
     { name: "Our Process", href: "/#process" },
     { name: "Reviews", href: "/#reviews" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -30,6 +30,7 @@ export default function Navbar() {
             height={80}
             priority
             className="h-15 w-auto object-contain"
+            style={{ width: "auto" }}
           />
         </Link>
 
@@ -49,7 +50,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center">
           <Button
-            href="#contact"
+            href="/contact"
             size="sm"
             rounded="full"
             className="font-semibold"
@@ -110,7 +111,7 @@ export default function Navbar() {
             </a>
           ))}
           <Button
-            href="#contact"
+            href="/contact"
             onClick={() => setIsOpen(false)}
             size="md"
             rounded="xl"

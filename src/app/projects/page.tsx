@@ -81,7 +81,7 @@ export default function ProjectsPage() {
           <div className="absolute inset-0 opacity-10 pointer-events-none"
             style={{ backgroundImage: "radial-gradient(circle at 70% 50%, var(--color-accent) 0%, transparent 60%)" }}
           />
-          <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 md:px-12 relative z-10">
             {/* Back link */}
             <Link
               href="/"
@@ -92,13 +92,13 @@ export default function ProjectsPage() {
               </svg>
               Back to Home
             </Link>
-            <span className="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full">
+            {/* <span className="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full">
               Full Portfolio
-            </span>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight mt-4 mb-4">
+            </span> */}
+            <h1 className="text-3xl md:text-5xl font-black tracking-tight mt-4 mb-4">
               All Our Projects
             </h1>
-            <p className="text-white/60 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-white/60 text-sm md:text-lg max-w-2xl leading-relaxed">
               Browse our complete gallery of signage and fabrication work — filtered by category.
               Click any project to view it in full detail.
             </p>
@@ -107,15 +107,15 @@ export default function ProjectsPage() {
         </div>
 
         {/* Filter + Grid */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-12 py-12 md:py-16">
 
           {/* Filter tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+          <div className="flex overflow-x-auto justify-start md:justify-center items-center gap-2 mb-10 pb-2.5 w-full">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => handleFilterChange(cat.id)}
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer ${
+                className={`px-5 py-2.5 flex-none rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer ${
                   activeFilter === cat.id
                     ? "bg-accent text-white shadow-md shadow-accent/20 border border-transparent"
                     : "bg-surface-light text-muted hover:text-charcoal border border-border-light hover:bg-border-light/30"

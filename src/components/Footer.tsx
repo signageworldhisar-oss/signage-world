@@ -4,23 +4,23 @@ import Image from "next/image";
 
 export default function Footer() {
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Why Us", href: "#why-choose-us" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Services", href: "#services" },
-    { name: "Our Process", href: "#process" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "Why Us", href: "/#why-choose-us" },
+    { name: "Portfolio", href: "/#portfolio" },
+    { name: "Services", href: "/#services" },
+    { name: "Our Process", href: "/#process" },
+    { name: "Reviews", href: "/#reviews" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const serviceLinks = [
-    { name: "ACP Sign Boards", href: "#services" },
-    { name: "LED Sign Boards", href: "#services" },
-    { name: "Acrylic Signage", href: "#services" },
-    { name: "Glow Sign Boards", href: "#services" },
-    { name: "Metal Letter Signage", href: "#services" },
-    { name: "Fabrication Works", href: "#services" },
-    { name: "Vinyl Graphics & Branding", href: "#services" },
+    { name: "ACP Sign Boards", href: "/acp-boards" },
+    { name: "LED Sign Boards", href: "/led-boards" },
+    { name: "Acrylic Signage", href: "/acrylic-signage" },
+    { name: "Glow Sign Boards", href: "/glow-signs" },
+    { name: "Metal Letter Signage", href: "/#services" },
+    { name: "Fabrication Works", href: "/#services" },
+    { name: "Vinyl Graphics & Branding", href: "/vehicle-wraps" },
   ];
 
   const socialLinks = [
@@ -67,7 +67,7 @@ export default function Footer() {
       id="footer"
       className="bg-charcoal text-white/95 pt-20 pb-10 relative"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
         {/* Column 1: Brand Info */}
         <div className="lg:col-span-4 flex flex-col justify-between">
           <div>
@@ -78,6 +78,7 @@ export default function Footer() {
                 width={200}
                 height={80}
                 className="h-20 w-auto object-contain brightness-0 invert"
+                style={{ width: "auto" }}
               />
             </div>
             <p className="text-sm text-white/60 leading-relaxed mb-6 max-w-sm">
@@ -237,7 +238,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom Credentials */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/40">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 pt-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/40">
         <div>
           <span className="font-bold text-white/60">
             An ISO 9001:2015 Certified Manufacturing Facility

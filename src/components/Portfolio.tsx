@@ -64,17 +64,17 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="py-12 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-12">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full">
             Our Portfolio
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-charcoal tracking-tight mt-4 mb-4">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-charcoal tracking-tight mt-4 mb-4">
             Our Best Work
           </h2>
-          <p className="text-base md:text-lg text-muted leading-relaxed">
+          <p className="text-sm md:text-lg text-muted leading-relaxed">
             A curated selection of our finest signage and fabrication projects
             — from LED displays to ACP cladding and shopfront branding.
           </p>

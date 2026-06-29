@@ -50,22 +50,22 @@ export default function Reviews() {
 
   return (
     <section id="reviews" className="py-12 md:py-24 bg-surface-light relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className=" justify-between items-center flex">
-          <div className=" mb-16">
+        <div className=" justify-between items-center flex sm:flex-row flex-col">
+          <div className="mb-5 text-center sm:text-left md:mb-16">
             <span className="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full">
               Testimonials
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-charcoal tracking-tight mt-4 mb-4">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-charcoal tracking-tight mt-4 mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-base max-w-[600px] md:text-lg text-muted leading-relaxed">
+            <p className="text-sm max-w-[600px] md:text-lg text-muted leading-relaxed">
               We take pride in delivering top-tier fabrication standards and
               excellent communication to every single brand partner.
             </p>
           </div>
-          <div className="flex gap-4">
+          <div className="hidden sm:flex gap-4">
             {/* Prev Button */}
             <button
               onClick={handlePrev}
@@ -129,7 +129,10 @@ export default function Reviews() {
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
                 {testimonials.map((testimonial, idx) => (
-                  <div key={idx} className="w-full shrink-0 flex flex-col items-center text-center px-4">
+                  <div
+                    key={idx}
+                    className="w-full shrink-0 flex flex-col items-center text-center px-4"
+                  >
                     {/* Star Rating */}
                     <div className="flex gap-1 mb-6">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -144,7 +147,7 @@ export default function Reviews() {
                     </div>
 
                     {/* Quote text */}
-                    <p className="text-lg md:text-xl font-medium text-charcoal leading-relaxed mb-8 max-w-2xl">
+                    <p className="text-base md:text-xl font-medium text-charcoal leading-relaxed mb-8 max-w-2xl">
                       &ldquo;{testimonial.quote}&rdquo;
                     </p>
 
@@ -170,7 +173,7 @@ export default function Reviews() {
           </div>
 
           {/* Navigation Controllers (Horizontal Row Below Card) */}
-          <div className="flex items-center justify-center mt-8 px-4">
+          <div className="flex items-center justify-center my-4 sm:mt-8 px-4">
             {/* Slide Indicators */}
             <div className="flex gap-2">
               {testimonials.map((_, idx) => (
@@ -186,10 +189,52 @@ export default function Reviews() {
                 />
               ))}
             </div>
-          </div>
-        </div>
 
-       
+          </div>
+            <div className="flex sm:hidden justify-center gap-4">
+              {/* Prev Button */}
+              <button
+                onClick={handlePrev}
+                className="w-12 h-12 rounded-full bg-white border border-border-light flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white text-charcoal shadow-md transition-all duration-200 cursor-pointer"
+                aria-label="Previous testimonial"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              {/* Next Button */}
+              <button
+                onClick={handleNext}
+                className="w-12 h-12 rounded-full bg-white border border-border-light flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white text-charcoal shadow-md transition-all duration-200 cursor-pointer"
+                aria-label="Next testimonial"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+        </div>
       </div>
     </section>
   );

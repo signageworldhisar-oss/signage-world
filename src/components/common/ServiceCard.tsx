@@ -32,7 +32,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       <div className="p-5 flex flex-col justify-between flex-grow">
         <div>
           {/* Tag and Rating stars inline */}
-          <div className="flex items-center justify-between mb-3 text-xs font-bold text-accent uppercase tracking-wider">
+          <div className="flex items-center justify-between mb-1 sm:mb-3 text-xs font-bold text-accent uppercase tracking-wider">
             <span>{service.title.split(" ")[0]} Product</span>
             <div className="flex gap-0.5 text-amber-500">
               {[...Array(5)].map((_, i) => (

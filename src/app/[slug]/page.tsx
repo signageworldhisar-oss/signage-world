@@ -28,7 +28,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         
         {/* Service Hero Header */}
         <section className="pt-28 pb-12 bg-surface-light border-b border-border-light relative">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 z-10 relative">
+          <div className="max-w-7xl mx-auto px-4 md:px-12 z-10 relative">
             <Link 
               href="/#services" 
               className="text-xs font-bold text-accent hover:text-accent-hover transition-colors duration-200 flex items-center gap-1.5 mb-6"
@@ -51,7 +51,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <h1 className="text-3xl md:text-5xl font-extrabold text-charcoal tracking-tight mb-4">
               {service.title}
             </h1>
-            <p className="text-lg md:text-xl font-bold text-charcoal-light leading-relaxed max-w-3xl mb-4">
+            <p className="text-base md:text-xl font-bold text-charcoal-light leading-relaxed max-w-3xl mb-4">
               {service.subtitle}
             </p>
           </div>
@@ -59,7 +59,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         {/* Detail Body Section */}
         <section className="py-12 md:py-24">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="max-w-7xl mx-auto px-4 md:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               
               {/* Left Column Content - Spans 2 columns on large screens */}

@@ -51,12 +51,12 @@ export default function Hero() {
       </div>
 
       {/* Hero Content (Left-aligned Overlay matching screenshot format) */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex flex-col items-start text-left">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 w-full relative z-10 flex flex-col items-start text-left">
         
        
 
         {/* Left-Aligned Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-4 sm:mb-6 max-w-4xl animate-fade-in-up">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-4 sm:mb-6 max-w-4xl animate-fade-in-up">
           Custom Signage Solutions That Make Your{" "}
           <span className="text-accent text-shadow-glow">
             Brand Stand Out
@@ -64,7 +64,7 @@ export default function Hero() {
         </h1>
 
         {/* Left-Aligned Subheadline */}
-        <p className="text-base md:text-lg text-white/80 leading-relaxed mb-8 max-w-2xl animate-fade-in-up [animation-delay:100ms]">
+        <p className="text-sm md:text-lg text-white/80 leading-relaxed mb-8 max-w-2xl animate-fade-in-up [animation-delay:100ms]">
           From shopfront signage and ACP cladding to LED signs and fabrication work,{" "}
           <span className="font-semibold text-white">Signage World</span> delivers high-quality branding solutions
           designed to attract attention and grow your business.
