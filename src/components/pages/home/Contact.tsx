@@ -63,7 +63,7 @@ const contactDetails = [
       </svg>
     ),
     label: "Working Hours",
-    value: "Mon – Sat, 9 AM – 6 PM",
+    value: "Monday to Saturday, 9:30 AM – 7:00 PM",
     href: null,
   },
   {

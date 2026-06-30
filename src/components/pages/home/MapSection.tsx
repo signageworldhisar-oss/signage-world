@@ -33,7 +33,7 @@ export default function MapSection() {
           {/* Google Map Iframe */}
           <div className="lg:col-span-8 min-h-[350px] md:min-h-[450px] rounded-2xl overflow-hidden shadow-md border border-border-light relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.564551720888!2d77.0136511754972!3d28.43577317577549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1858a74e183b%3A0x217d12f4585c544d!2sGalaxy%20Signage!5e0!3m2!1sen!2sin!4v1719312000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.2942671224996!2d75.72957236120904!3d29.15599954647558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391233acca8096e3%3A0xc26b159b79726001!2sA%20ONE%20GRAPHIC!5e0!3m2!1sen!2sin!4v1782819330496!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -163,7 +163,7 @@ export default function MapSection() {
 
             <div className="mt-8 border-t border-border-light pt-6">
               <Button
-                href="https://www.google.com/maps/place/Galaxy+Signage/@28.4357732,77.0136512,17z/data=!3m1!4b1!4m6!3m5!1s0x390d1858a74e183b:0x217d12f4585c544d!8m2!3d28.4357732!4d77.0162261!16s%2Fg%2F11b6g58231"
+                href="https://www.google.com/maps/place/A+ONE+GRAPHIC/@29.1559995,75.7295724,17z/data=!3m1!4b1!4m6!3m5!1s0x391233acca8096e3:0xc26b159b79726001!8m2!3d29.1559995!4d75.7321473!16s%2Fg%2F11g9y_z0v6"
                 target="_blank"
                 variant="primary"
                 size="md"

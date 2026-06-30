@@ -1,23 +1,89 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Button from "@/components/Button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Why Us", href: "/#why-choose-us" },
-    { name: "projects", href: "/projects" },
+    { name: "Projects", href: "/projects" },
     { name: "Services", href: "/#services" },
     { name: "Our Process", href: "/#process" },
     { name: "Reviews", href: "/#reviews" },
     { name: "Contact", href: "/contact" },
   ];
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    const sections = ["why-choose-us", "services", "process", "reviews"];
+    const observerOptions = {
+      root: null,
+      rootMargin: "-25% 0px -55% 0px", // Centered viewport trigger
+      threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, [pathname]);
+
+  const isActive = (href: string) => {
+    if (href.startsWith("/#")) {
+      const id = href.replace("/#", "");
+      return pathname === "/" && activeSection === id;
+    }
+    if (href === "/") {
+      return pathname === "/" && activeSection === "";
+    }
+    return pathname === href;
+  };
+
+  const getLinkClass = (href: string) => {
+    const active = isActive(href);
+    return `text-[15px] font-medium transition-colors duration-250 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 ${
+      active
+        ? "text-accent after:w-full"
+        : "text-charcoal/80 hover:text-accent after:w-0 hover:after:w-full"
+    }`;
+  };
+
+  const getMobileLinkClass = (href: string) => {
+    const active = isActive(href);
+    return `text-base font-semibold transition-all duration-200 ${
+      active
+        ? "text-accent pl-2"
+        : "text-charcoal/90 hover:text-accent hover:pl-2"
+    }`;
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b sm:py-2 bg-white border-border-light shadow-sm">
@@ -41,7 +107,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-[15px] font-medium text-charcoal/80 hover:text-accent transition-colors duration-250 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+              className={getLinkClass(link.href)}
             >
               {link.name}
             </a>
@@ -106,7 +172,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-base font-semibold text-charcoal/90 hover:text-accent hover:pl-2 transition-all duration-200"
+              className={getMobileLinkClass(link.href)}
             >
               {link.name}
             </a>

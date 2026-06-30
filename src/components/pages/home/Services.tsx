@@ -172,7 +172,7 @@ export default function Services() {
         </div>
 
         {/* Services Swiper Container */}
-        <div className="relative group/swiper md:mt-16 px-2 sm:px-4 md:px-6">
+        <div className="relative group/swiper  md:mt-10 px-2 sm:px-4 md:px-0">
           <Swiper
             onSwiper={setSwiper}
             modules={[Autoplay, Pagination]}

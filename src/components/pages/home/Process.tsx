@@ -35,7 +35,7 @@ export default function Process() {
     <section id="process" className="py-12 md:py-24 bg-white select-none">
       <div className="max-w-7xl mx-auto px-4 md:px-12">
         {/* Large Rounded Content Box */}
-        <div className="bg-[#F8F9FB] border border-neutral-100 rounded-xl md:rounded-[48px] px-3 md:px-6 py-5 md:py-10 md:p-20 shadow-xs relative overflow-hidden flex flex-col items-center">
+        <div className="bg-[#F8F9FB] border border-neutral-100 rounded-xl md:rounded-[48px] px-3 md:px-6 lg:px-0 py-5 md:py-10 md:p-20 shadow-xs relative overflow-hidden flex flex-col items-center">
           {/* Subtle decorative bg blob */}
           <div
             className="pointer-events-none absolute rounded-full bg-accent/5 blur-3xl transition-all duration-700 ease-in-out"

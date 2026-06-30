@@ -4,12 +4,18 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 export default function Reviews() {
   const [swiper, setSwiper] = useState<any>(null);
 
   const testimonials = [
     {
-      quote: "Excellent workmanship and timely delivery. The signage transformed our storefront completely, bringing in double the walk-in customers.",
+      quote:
+        "Excellent workmanship and timely delivery. The signage transformed our storefront completely, bringing in double the walk-in customers.",
       author: "Satanjeev Kumar Jha",
       role: "Retail Store Owner",
       rating: 5,
@@ -17,7 +23,8 @@ export default function Reviews() {
       gradient: "from-orange-500 to-amber-500",
     },
     {
-      quote: "Professional team and great communication throughout the project. The 3D LED backlit letters look extremely luxury and build immediate trust.",
+      quote:
+        "Professional team and great communication throughout the project. The 3D LED backlit letters look extremely luxury and build immediate trust.",
       author: "Shweta Yadav",
       role: "Corporate Marketing Director",
       rating: 5,
@@ -25,7 +32,8 @@ export default function Reviews() {
       gradient: "from-blue-600 to-indigo-500",
     },
     {
-      quote: "Highly recommended for quality signage and fabrication services. They handled the complex structural framing installation cleanly and safely.",
+      quote:
+        "Highly recommended for quality signage and fabrication services. They handled the complex structural framing installation cleanly and safely.",
       author: "Rakesh Malhotra",
       role: "Operations Head, Airia Mall",
       rating: 5,
@@ -33,7 +41,8 @@ export default function Reviews() {
       gradient: "from-emerald-500 to-teal-500",
     },
     {
-      quote: "Mr. Tomar and the fabrication crew are masters of detail. They delivered our double-sided ACP glowing signs perfectly within our tight budget.",
+      quote:
+        "Mr. Tomar and the fabrication crew are masters of detail. They delivered our double-sided ACP glowing signs perfectly within our tight budget.",
       author: "Sunil Kohli",
       role: "Restaurant Franchise Owner",
       rating: 5,
@@ -47,7 +56,7 @@ export default function Reviews() {
       <div className="max-w-7xl mx-auto px-4 md:px-12 relative z-10">
         {/* Section Header */}
         <div className=" justify-between items-center flex sm:flex-row flex-col">
-          <div className="mb-5 text-center sm:text-left md:mb-16">
+          <div className="mb-5 text-center sm:text-left md:mb-10">
             <span className="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full">
               Testimonials
             </span>
@@ -105,7 +114,7 @@ export default function Reviews() {
         </div>
 
         {/* Testimonial Slider Card */}
-        <div className="max-w-4xl mx-auto relative">
+        <div className="w-full mx-auto relative">
           {/* Main Card Container */}
           <div className="bg-white p-8 md:p-12 rounded-3xl border border-border-light shadow-xl shadow-charcoal/5 relative overflow-hidden">
             {/* Background design accents */}
@@ -123,13 +132,14 @@ export default function Reviews() {
                 modules={[Autoplay, Pagination]}
                 spaceBetween={20}
                 slidesPerView={1}
+                loop={true}
                 autoplay={{
                   delay: 6000,
                   disableOnInteraction: false,
                 }}
                 pagination={{
-                  el: ".reviews-pagination",
                   clickable: true,
+                  el: ".reviews-pagination",
                   bulletClass:
                     "w-2.5 h-2.5 rounded-full bg-charcoal/20 cursor-pointer transition-all duration-300 inline-block mx-1.5",
                   bulletActiveClass: "!bg-accent !w-6",

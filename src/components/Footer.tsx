@@ -52,15 +52,6 @@ export default function Footer() {
         </svg>
       ),
     },
-    {
-      name: "Pinterest",
-      href: "https://in.pinterest.com/galaxysignageindia/",
-      icon: (
-        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.41 7.61 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.395-5.918 1.395-5.918s-.356-.715-.356-1.777c0-1.664.967-2.906 2.17-2.906 1.024 0 1.517.768 1.517 1.686 0 1.029-.656 2.568-.994 3.993-.283 1.194.599 2.169 1.778 2.169 2.133 0 3.771-2.249 3.771-5.496 0-2.873-2.064-4.882-5.013-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.621 0 11.988-5.367 11.988-11.987C24 5.368 18.633 0 12.017 0z" />
-        </svg>
-      ),
-    },
   ];
 
   return (
@@ -84,7 +75,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-white/60 leading-relaxed mb-6 max-w-sm">
               {
-                "Signage World is one of India's premier modular signage and retail display fabrication experts. We construct durable signage products that scale business visibility."
+                "Signage World is one of Hisar's premier modular signage and retail display fabrication experts. We construct durable signage products that scale business visibility."
               }
             </p>
           </div>
@@ -193,63 +184,48 @@ export default function Footer() {
               </svg>
               <div>
                 <h5 className="text-[13px] font-bold text-white uppercase tracking-wide">
-                  Helplines
+                  Helpline
                 </h5>
                 <p className="text-xs text-white/60 mt-1 leading-relaxed">
                   <a href={PHONE_TEL} className="hover:text-white">
                     {PHONE_DISPLAY}
-                  </a>{" "}
-                  <br />
-                  <a href="tel:+919891276777" className="hover:text-white">
-                    +91 98912 76777
                   </a>
                 </p>
               </div>
             </li>
-            <li className="flex gap-3">
-              <svg
-                className="w-5 h-5 text-accent shrink-0 mt-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              <div>
-                <h5 className="text-[13px] font-bold text-white uppercase tracking-wide">
-                  Sales Email
-                </h5>
-                <p className="text-xs text-white/60 mt-1">
-                  <a
-                    href="mailto:sales@signageworld.co"
-                    className="hover:text-white"
-                  >
-                    sales@signageworld.co
-                  </a>
-                </p>
-              </div>
-            </li>
+           
           </ul>
         </div>
       </div>
 
       {/* Footer Bottom Credentials */}
-      <div className="max-w-7xl mx-auto px-4 md:px-12 pt-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/40">
-        <div>
-          <span className="font-bold text-white/60">
-            An ISO 9001:2015 Certified Manufacturing Facility
-          </span>
+      <div className="max-w-7xl mx-auto px-4 md:px-12 pt-10 flex flex-col items-center gap-4 text-xs text-white/40">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <div>
+            <span className="font-bold text-white/60">
+              An ISO 9001:2015 Certified Manufacturing Facility
+            </span>
+          </div>
+          <div>
+            <p>
+              &copy; {new Date().getFullYear()} Signage World. All rights
+              reserved.
+            </p>
+          </div>
         </div>
-        <div>
-          <p>
-            &copy; {new Date().getFullYear()} Signage World. All rights
-            reserved. Designed for high conversion.
-          </p>
+        <div className="w-full border-t border-white/5 pt-4 text-center text-xs text-white/30 flex items-center justify-center gap-1.5">
+          <span>Created &amp; Maintained by</span>
+          <a
+            href="https://innovaft.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-white/50 hover:text-accent transition-colors inline-flex items-center gap-0.5 hover:underline"
+          >
+            Innovaft
+            <svg className="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
