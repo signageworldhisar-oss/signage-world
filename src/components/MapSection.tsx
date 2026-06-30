@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
+import { PHONE_TEL, PHONE_DISPLAY } from "@/lib/constants";
 
 export default function MapSection() {
   const address =
@@ -149,10 +150,10 @@ export default function MapSection() {
                     </h4>
                     <p className="text-sm text-muted mt-1 font-medium">
                       <a
-                        href="tel:+918295567765"
+                        href={PHONE_TEL}
                         className="hover:text-accent transition-colors"
                       >
-                        +91 82955 67765
+                        {PHONE_DISPLAY}
                       </a>
                     </p>
                   </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { getWhatsAppLink } from "@/lib/constants";
 
 export default function WhatsAppFloatingButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,9 +14,8 @@ export default function WhatsAppFloatingButton() {
     return () => clearTimeout(timer);
   }, []);
 
-  const PHONE = "918295567765";
   const message = "Hello! I'd like to inquire about custom signage solutions for my business.";
-  const whatsappUrl = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = getWhatsAppLink(message);
 
   if (!isVisible) return null;
 

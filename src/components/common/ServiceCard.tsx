@@ -37,7 +37,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       <Link href={`/${service.slug}`} className="relative h-52 sm:h-52 w-full overflow-hidden bg-charcoal block">
         {slideshowImages.map((imgSrc, index) => (
           <Image
-            key={imgSrc}
+            key={index}
             src={imgSrc}
             alt={service.title}
             fill
@@ -51,7 +51,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       </Link>
 
       {/* Card content and detail info */}
-      <div className="p-5 flex flex-col justify-between flex-grow">
+      <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow">
         <div>
           {/* Tag and Rating stars inline */}
           <div className="flex items-center justify-between mb-1 sm:mb-3 text-xs font-bold text-accent uppercase tracking-wider">
@@ -78,7 +78,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           </p>
         </div>
 
-        <div className="pt-4 border-t border-border-light flex items-center justify-between">
+        <div className="pt-1 sm:pt-4 border-t border-border-light flex items-center justify-between">
           <Link href={`/${service.slug}`} className="text-xs font-bold text-accent hover:text-accent-hover transition-colors duration-200 flex items-center gap-1 group/btn">
             View Details
             <svg className="w-3.5 h-3.5 transform transition-transform duration-200 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { serviceDetails } from "@/lib/helper";
+import { WHATSAPP_BASE } from "@/lib/constants";
 
 export function generateStaticParams() {
   return [
@@ -27,7 +28,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <main className="min-h-screen bg-white">
         
         {/* Service Hero Header */}
-        <section className="pt-28 pb-16 bg-charcoal text-white relative overflow-hidden">
+        <section className="pt-20 sm:pt-28 pb-16 bg-charcoal text-white relative overflow-hidden">
           {/* Subtle accent glow behind the header */}
           <div 
             className="absolute inset-0 opacity-15 pointer-events-none"
@@ -35,22 +36,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           />
 
           <div className="max-w-7xl mx-auto px-4 md:px-12 z-10 relative">
-            {/* Breadcrumb Navigation */}
-            <div className="flex items-center gap-2.5 text-xs font-semibold text-white/50 mb-8">
-              <Link href="/" className="hover:text-white transition-colors">
-                Home
-              </Link>
-              <span className="text-white/20">/</span>
-              <Link href="/#services" className="hover:text-white transition-colors">
-                Services
-              </Link>
-              <span className="text-white/20">/</span>
-              <span className="text-accent flex items-center gap-1.5">
-                <span className="shrink-0 scale-75 opacity-80">{service.icon}</span>
-                {service.title}
-              </span>
-            </div>
-
             <span className="text-accent font-extrabold text-[10px] md:text-xs uppercase tracking-widest bg-accent/15 px-3.5 py-1.5 rounded-full">
               Premium Fabrication
             </span>
@@ -180,7 +165,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                       Request Free Estimate
                     </Link>
                     <a
-                      href="https://wa.me/918295567765"
+                      href={WHATSAPP_BASE}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full text-center bg-white border border-border-light hover:border-accent text-charcoal hover:text-accent font-bold text-xs py-3.5 px-6 rounded-xl transition-all duration-300"

@@ -3,9 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Button from "@/components/Button";
-
-// Pre-filled phone number for WhatsApp redirects
-const PHONE_NUMBER = "918295567765";
+import { PHONE, PHONE_TEL, PHONE_DISPLAY } from "@/lib/constants";
 
 // Service / Signage options matching the services offered on the homepage
 const SIGNAGE_OPTIONS = [
@@ -47,7 +45,7 @@ export default function ContactPage() {
       `*Installation Needed:* ${installationText}\n` +
       `*Project Requirements:* ${message}`;
 
-    return `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(formattedText)}`;
+    return `https://wa.me/${PHONE}?text=${encodeURIComponent(formattedText)}`;
   };
 
   /**
@@ -372,7 +370,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="text-[13px] font-black text-charcoal uppercase tracking-wider">Helplines</h4>
                     <p className="text-sm text-muted mt-1 font-semibold space-y-1">
-                      <a href="tel:+918295567765" className="block hover:text-accent transition-colors">+91 82955 67765</a>
+                      <a href={PHONE_TEL} className="block hover:text-accent transition-colors">{PHONE_DISPLAY}</a>
                       <a href="tel:+919891276777" className="block hover:text-accent transition-colors">+91 98912 76777</a>
                     </p>
                   </div>

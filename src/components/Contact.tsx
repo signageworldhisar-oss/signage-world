@@ -1,11 +1,9 @@
 "use client";
 
 import Button from "@/components/Button";
+import { PHONE_DISPLAY, PHONE_TEL, getWhatsAppLink } from "@/lib/constants";
 
 // Pre-filled WhatsApp templates
-const PHONE = "918295567765";
-const getWhatsAppLink = (message: string) =>
-  `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
 
 const actions = [
   {
@@ -45,8 +43,8 @@ const contactDetails = [
       </svg>
     ),
     label: "Direct Call",
-    value: "+91 82955 67765",
-    href: "tel:+918295567765",
+    value: PHONE_DISPLAY,
+    href: PHONE_TEL,
   },
   {
     icon: (
@@ -105,7 +103,7 @@ export default function Contact() {
           <span className="text-accent font-bold text-xs uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full">
             Get In Touch
           </span>
-          <h2 className="text-2xl md:text-4xl font-extrabold text-charcoal tracking-tight mt-4 mb-4">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-charcoal tracking-tight my-2 sm:my-4">
             Ready to Upgrade Your Business Visibility?
           </h2>
           <p className="text-sm md:text-lg text-muted leading-relaxed">
@@ -118,7 +116,7 @@ export default function Contact() {
         <div className="bg-charcoal text-white rounded-xl lg:rounded-3xl overflow-hidden shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Left — WhatsApp Actions */}
-            <div className="p-3 md:p-8 md:p-12 relative overflow-hidden">
+            <div className="p-4 md:p-8 lg:p-12 relative overflow-hidden">
               {/* Decorative blob */}
               <div className="absolute top-0 right-0 w-56 h-56 bg-accent/10 rounded-bl-full pointer-events-none" />
 
@@ -176,7 +174,7 @@ export default function Contact() {
             </div>
 
             {/* Right — Contact Info + Specialist */}
-            <div className="p-3 md:p-12 bg-white/[0.03] border-t lg:border-t-0 lg:border-l border-white/10 flex flex-col justify-between gap-10">
+            <div className="p-4 md:p-8 lg:p-12 bg-white/3 border-t lg:border-t-0 lg:border-l border-white/10 flex flex-col justify-between gap-10">
               {/* Contact details */}
               <div className="flex flex-col gap-5">
                 <h4 className="text-sm font-bold text-white/40 uppercase tracking-widest">

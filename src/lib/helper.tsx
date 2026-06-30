@@ -52,8 +52,8 @@ export const serviceDetails: Record<string, ServiceData> = {
       "Street Pole Banners",
     ],
     gallery: [
-      "/images/office-photos/flex-printing.jpeg",
-      "/images/project-8.jpeg",
+      "/images/flex-printing.jpeg",
+      "/images/flex-work.jpeg",
       "/images/project-18.jpeg"
     ]
   },
@@ -96,7 +96,7 @@ export const serviceDetails: Record<string, ServiceData> = {
     subtitle: "Premium Acrylic Signage for Modern Branding",
     pdfText: "Enhance your business image with sleek, durable, and professional acrylic signs.",
     extendedDescription: "Create a modern, sophisticated aesthetic with laser-cut solid acrylic letters and logo plaques. Ideal for upscale receptions, boardrooms, retail interiors, and prestige corporate headquarters, acrylic signage provides a clean, glassy finish that speaks of quality.",
-    image: "/images/project-5.jpeg",
+    image: "/images/name-plate.jpeg",
     icon: <IconAcrylicSignage className="w-8 h-8 text-accent" />,
     features: [
       "Precision CNC Laser-Cut Profiles",
@@ -119,7 +119,7 @@ export const serviceDetails: Record<string, ServiceData> = {
       "Exhibition Logo Displays",
     ],
     gallery: [
-      "/images/project-5.jpeg",
+      "/images/name-plate.jpeg",
       "/images/project-11.jpeg",
       "/images/project-13.jpeg",
       "/images/project-15.jpeg"
@@ -130,7 +130,7 @@ export const serviceDetails: Record<string, ServiceData> = {
     subtitle: "Durable ACP Sign Boards & Cladding Solutions",
     pdfText: "Create a modern business exterior with premium ACP signage and cladding.",
     extendedDescription: "Transform your building facade with premium Aluminum Composite Panel (ACP) cladding and signboards. Highly weather-resistant, lightweight, and offering superb structural flatness, ACP boards serve as the perfect modern background substrate for 3D LED or metal letters.",
-    image: "/images/project-3.jpeg",
+    image: "/images/acp-work-3.jpeg",
     icon: <IconACPBoard className="w-8 h-8 text-accent" />,
     features: [
       "Heavy-Duty Aluminum Composite Substrate",
@@ -189,7 +189,7 @@ export const serviceDetails: Record<string, ServiceData> = {
     ],
     gallery: [
       "/images/project-1.jpeg",
-      "/images/project-8.jpeg",
+      "/images/project-23.jpeg",
       "/images/project-18.jpeg"
     ]
   },

@@ -9,8 +9,8 @@ export default function Hero() {
 
   const carouselImages = [
     "/images/project-1.jpeg",
-    "/images/project-3.jpeg",
-    "/images/project-5.jpeg",
+    "/images/acp-work-3.jpeg",
+    "/images/name-plate.jpeg",
     "/images/project-12.jpeg",
     "/images/project-14.jpeg",
   ];

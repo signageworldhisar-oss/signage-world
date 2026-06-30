@@ -10,8 +10,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
     { name: "Why Us", href: "/#why-choose-us" },
-    { name: "Portfolio", href: "/projects" },
+    { name: "projects", href: "/projects" },
     { name: "Services", href: "/#services" },
     { name: "Our Process", href: "/#process" },
     { name: "Reviews", href: "/#reviews" },
@@ -29,8 +30,8 @@ export default function Navbar() {
             width={200}
             height={80}
             priority
-            className="h-15 w-auto object-contain"
-            style={{ width: "auto" }}
+            className="object-contain"
+            style={{ height: "60px", width: "auto" }}
           />
         </Link>
 

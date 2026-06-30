@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { PHONE_TEL, PHONE_DISPLAY } from "@/lib/constants";
 
 export default function Footer() {
   const quickLinks = [
@@ -65,7 +66,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-charcoal text-white/95 pt-20 pb-10 relative"
+      className="bg-charcoal text-white/95 pt-10 md:pt-20 pb-10 relative"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
         {/* Column 1: Brand Info */}
@@ -195,8 +196,8 @@ export default function Footer() {
                   Helplines
                 </h5>
                 <p className="text-xs text-white/60 mt-1 leading-relaxed">
-                  <a href="tel:+918295567765" className="hover:text-white">
-                    +91 82955 67765
+                  <a href={PHONE_TEL} className="hover:text-white">
+                    {PHONE_DISPLAY}
                   </a>{" "}
                   <br />
                   <a href="tel:+919891276777" className="hover:text-white">
