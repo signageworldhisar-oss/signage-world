@@ -1,18 +1,18 @@
 const storyMilestones = [
   {
-    year: "2017",
+    year: "2014",
     title: "Learning the Craft",
     description:
       "Faheem began his journey studying graphic design and visual arts at Mahatma Gandhi Sakasharta Mission near Bus Stand, Hisar. What started as a skill became a calling.",
   },
   {
-    year: "2017 – 2020",
+    year: "2014 – 2017",
     title: "Hands-On Mastery",
     description:
       "He joined a signage and printing shop near Taliyan Pull, Gausala, Hisar — spending 3 years mastering on-the-ground fabrication and learning what businesses truly need to make their brand visible.",
   },
   {
-    year: "2020 – 2025",
+    year: "2017 – 2025",
     title: "Industry Leadership",
     description:
       "Faheem joined Sanya Advertisers, one of the established names in local signage, where he worked for 8 years sharpening skills in fabrication, client handling, large-format printing, and project management.",
@@ -37,8 +37,8 @@ export default function JourneyTimeline() {
             Every Great Business Starts With a Passion
           </h2>
           <p className="text-sm md:text-lg text-muted leading-relaxed">
-            Ours started in 2017 — with one person, one craft, and an
-            unwavering commitment to quality.
+            Ours started in 2017 — with one person, one craft, and an unwavering
+            commitment to quality.
           </p>
         </div>
 
@@ -50,7 +50,10 @@ export default function JourneyTimeline() {
           {/* Step nodes */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-0 relative z-10">
             {storyMilestones.map((milestone, i) => (
-              <div key={i} className="flex flex-col items-center text-center px-4 relative">
+              <div
+                key={i}
+                className="flex flex-col items-center text-center px-4 relative"
+              >
                 {/* Connector line segment — left half (all except first) */}
                 {i > 0 && (
                   <div className="hidden md:block absolute top-10 right-1/2 left-0 h-px bg-border-light -z-10" />
@@ -63,8 +66,12 @@ export default function JourneyTimeline() {
                 {/* Step badge */}
                 <div className="relative mb-6">
                   <div className="w-20 h-20 rounded-full bg-white border-2 border-border-light shadow-md flex flex-col items-center justify-center group-hover:border-accent transition-colors duration-300">
-                    <span className="text-accent font-black text-xl leading-none">{i + 1}</span>
-                    <span className="text-[9px] font-bold text-muted uppercase tracking-widest mt-0.5">Step</span>
+                    <span className="text-accent font-black text-xl leading-none">
+                      {i + 1}
+                    </span>
+                    <span className="text-[9px] font-bold text-muted uppercase tracking-widest mt-0.5">
+                      Step
+                    </span>
                   </div>
                   {/* Accent ring on active/latest */}
                   {i === storyMilestones.length - 1 && (

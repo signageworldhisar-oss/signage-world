@@ -19,7 +19,7 @@ export default function Reviews() {
       author: "Satanjeev Kumar Jha",
       role: "Retail Store Owner",
       rating: 5,
-      initials: "SK",
+      initials: "SK", 
       gradient: "from-orange-500 to-amber-500",
     },
     {
