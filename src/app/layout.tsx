@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import { SITE_URL } from "@/lib/constants";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -113,6 +115,20 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppFloatingButton />
+        {process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId="G-9E6RZQR9K2" />
+        )}
+        {process.env.NODE_ENV === "production" && (
+          <Script id="microsoft-clarity" strategy="afterInteractive">
+            {`
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "xo9r77xkr0");
+            `}
+          </Script>
+        )}
       </body>
     </html>
   );
