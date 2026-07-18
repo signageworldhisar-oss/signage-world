@@ -18,11 +18,11 @@ export default function ServiceHero({ title, subtitle }: ServiceHeroProps) {
       <div className="max-w-7xl mx-auto px-4 md:px-12 z-10 relative">
           <div className="flex flex-col items-start gap-2">
             <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-white/50 hover:text-accent text-sm font-semibold md:mb-8 transition-colors duration-200"
+              href="/#services"
+              className="group inline-flex items-center gap-2 text-white/50 hover:text-accent text-sm font-semibold md:mb-8 transition-colors duration-200"
             >
               <svg
-                className="w-4 h-4"
+                className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ export default function ServiceHero({ title, subtitle }: ServiceHeroProps) {
                   d="M15 19l-7-7 7-7"
                 />
               </svg>
-              Back to Home
+              Back to Services
             </Link>
                     <span className="text-accent font-extrabold text-[6px] sm:text-[10px] md:text-xs uppercase tracking-widest bg-accent/15 px-3.5 py-1.5 rounded-full">
             Premium Fabrication

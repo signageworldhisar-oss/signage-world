@@ -21,5 +21,5 @@ export const getWhatsAppLink = (message: string) =>
   `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
 
 /** Base production site URL */
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://signageworldhisar.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://signage-world.vercel.app";
 

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
     images: [
       {
-        url: "/LOGO/SVG.svg",
+        url: "/LOGO/PNG.png",
         width: 1200,
         height: 630,
         alt: "Signage World Logo",
@@ -43,7 +43,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Signage World | Custom Premium Signage & Fabrication Solutions",
     description: "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
-    images: ["/LOGO/SVG.svg"],
+    images: ["/LOGO/PNG.png"],
+  },
+  verification: {
+    google: "mM3NUIM6Lop7dqOevvMkXouYy5Z-ZDixH2lf40Yn428",
   },
 };
 
