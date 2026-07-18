@@ -20,8 +20,18 @@ export default function Hero() {
       title: "Premium Quality Materials",
       description: "Marine-grade ACP & Samsung LEDs",
       icon: (
-        <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        <svg
+          className="w-5 h-5 text-accent"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          />
         </svg>
       ),
     },
@@ -29,8 +39,18 @@ export default function Hero() {
       title: "Expert Fabrication Team",
       description: "10+ years of hands-on experience",
       icon: (
-        <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        <svg
+          className="w-5 h-5 text-accent"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+          />
         </svg>
       ),
     },
@@ -38,8 +58,18 @@ export default function Hero() {
       title: "On-Time Project Delivery",
       description: "Fast and reliable turnaround times",
       icon: (
-        <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg
+          className="w-5 h-5 text-accent"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
         </svg>
       ),
     },
@@ -47,8 +77,18 @@ export default function Hero() {
       title: "End-to-End Installation",
       description: "Safe, accurate, and clean setup",
       icon: (
-        <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        <svg
+          className="w-5 h-5 text-accent"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+          />
         </svg>
       ),
     },
@@ -90,22 +130,18 @@ export default function Hero() {
 
       {/* Hero Content (Left-aligned Overlay matching screenshot format) */}
       <div className="max-w-7xl mx-auto px-4 md:px-12 w-full relative z-10 flex flex-col items-start text-left">
-        
-       
-
         {/* Left-Aligned Heading */}
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-4 sm:mb-6 max-w-4xl animate-fade-in-up">
           Custom Signage Solutions That Make Your{" "}
-          <span className="text-accent text-shadow-glow">
-            Brand Stand Out
-          </span>
+          <span className="text-accent text-shadow-glow">Brand Stand Out</span>
         </h1>
 
         {/* Left-Aligned Subheadline */}
         <p className="text-sm md:text-lg text-white/80 leading-relaxed mb-8 max-w-2xl animate-fade-in-up [animation-delay:100ms]">
-          From shopfront signage and ACP cladding to LED signs and fabrication work,{" "}
-          <span className="font-semibold text-white">Signage World</span> delivers high-quality branding solutions
-          designed to attract attention and grow your business.
+          From shopfront signage and ACP cladding to LED signs and fabrication
+          work, <span className="font-semibold text-white">Signage World</span>{" "}
+          delivers high-quality branding solutions designed to attract attention
+          and grow your business.
         </p>
 
         {/* Left-Aligned Action CTAs (Solid White & Transparent outline options) */}
@@ -137,27 +173,34 @@ export default function Hero() {
               key={idx}
               onClick={() => setCurrentSlide(idx)}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                currentSlide === idx ? "bg-accent scale-110" : "bg-white/30 hover:bg-white/50"
+                currentSlide === idx
+                  ? "bg-accent scale-110"
+                  : "bg-white/30 hover:bg-white/50"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
           ))}
         </div>
-
       </div>
-
       {/* Trust Badges Bar (Bottom Visual Transition Anchor) */}
       <div className="absolute bottom-0 left-0 right-0 py-6 bg-white border-t border-border-light z-10 shadow-lg">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustBadges.map((badge, index) => (
-              <div key={index} className="flex gap-3 hover:translate-x-1 transition-all duration-200 justify-center sm:justify-start">
+              <div
+                key={index}
+                className="flex gap-3 hover:translate-x-1 transition-all duration-200 justify-center sm:justify-start"
+              >
                 <div className="mt-0.5 shrink-0 bg-accent/10 w-9 h-9 rounded-lg flex items-center justify-center">
                   {badge.icon}
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-charcoal tracking-wide">{badge.title}</h3>
-                  <p className="text-xs text-muted font-normal">{badge.description}</p>
+                  <h3 className="text-sm font-bold text-charcoal tracking-wide">
+                    {badge.title}
+                  </h3>
+                  <p className="text-xs text-muted font-normal">
+                    {badge.description}
+                  </p>
                 </div>
               </div>
             ))}

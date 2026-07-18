@@ -19,7 +19,7 @@ export default function Reviews() {
       author: "Satanjeev Kumar Jha",
       role: "Retail Store Owner",
       rating: 5,
-      initials: "SK", 
+      initials: "SK",
       gradient: "from-orange-500 to-amber-500",
     },
     {
@@ -171,7 +171,7 @@ export default function Reviews() {
                       <div className="flex flex-col items-center">
                         {/* Avatar with Initials Gradient */}
                         <div
-                          className={`w-14 h-14 rounded-full bg-gradient-to-tr ${testimonial.gradient} flex items-center justify-center text-white font-extrabold text-lg shadow-md mb-3`}
+                          className={`w-14 h-14 rounded-full bg-linear-to-tr ${testimonial.gradient} flex items-center justify-center text-white font-extrabold text-lg shadow-md mb-3`}
                         >
                           {testimonial.initials}
                         </div>

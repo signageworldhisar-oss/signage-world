@@ -8,11 +8,14 @@ import WhyTrustUs from "@/components/pages/about/WhyTrustUs";
 import WorkshopCTA from "@/components/pages/about/WorkshopCTA";
 
 export const metadata: Metadata = {
-  title: "About Us | Signage World — Hisar's Trusted Signage Experts",
+  title: "About Us",
   description:
     "Learn about Signage World — a GST-registered Hisar-based signage and fabrication company with 10+ years of experience. Founded by Faheem, serving 1,000+ businesses across Haryana.",
   keywords:
     "about Signage World, Hisar signage company, Faheem signage, GST registered signage, Haryana fabrication",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

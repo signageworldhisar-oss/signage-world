@@ -3,6 +3,8 @@ import { serviceDetails } from "@/lib/helper";
 import ServiceHero from "@/components/pages/service-detail/ServiceHero";
 import ServiceGallery from "@/components/pages/service-detail/ServiceGallery";
 import ServiceSidebar from "@/components/pages/service-detail/ServiceSidebar";
+import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/constants";
 
 export function generateStaticParams() {
   return [
@@ -15,6 +17,40 @@ export function generateStaticParams() {
   ];
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = serviceDetails[slug];
+
+  if (!service) {
+    return {};
+  }
+
+  return {
+    title: service.title,
+    description: service.pdfText,
+    alternates: {
+      canonical: `/${slug}`,
+    },
+    openGraph: {
+      title: `${service.title} | Signage World Hisar`,
+      description: service.pdfText,
+      url: `${SITE_URL}/${slug}`,
+      images: [
+        {
+          url: service.image,
+          alt: service.title,
+        }
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} | Signage World Hisar`,
+      description: service.pdfText,
+      images: [service.image],
+    },
+  };
+}
+
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = serviceDetails[slug];
@@ -23,8 +59,34 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.pdfText,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Signage World",
+      "url": SITE_URL
+    },
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "Hisar"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Haryana"
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ServiceHero title={service.title} subtitle={service.subtitle} />
 
       {/* Detail Body Section */}

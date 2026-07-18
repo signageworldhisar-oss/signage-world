@@ -19,3 +19,7 @@ export const WHATSAPP_BASE = `https://wa.me/${PHONE}`;
 /** Helper: build a pre-filled WhatsApp URL */
 export const getWhatsAppLink = (message: string) =>
   `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
+
+/** Base production site URL */
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://signageworldhisar.com";
+
