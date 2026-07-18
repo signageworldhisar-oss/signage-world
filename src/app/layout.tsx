@@ -18,10 +18,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Signage World | Custom Premium Signage & Fabrication Solutions",
-    template: "%s | Signage World Hisar"
+    template: "%s | Signage World Hisar",
   },
-  description: "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
-  keywords: "premium signage, ACP sign board, LED sign board, Acrylic letters, Metal lettering, shopfront branding, signage fabrication, Signage World Hisar, signage near me",
+  description:
+    "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
+  keywords:
+    "premium signage, ACP sign board, LED sign board, Acrylic letters, Metal lettering, shopfront branding, signage fabrication, Signage World Hisar, signage near me",
   alternates: {
     canonical: "./",
   },
@@ -31,20 +33,22 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Signage World",
     title: "Signage World | Custom Premium Signage & Fabrication Solutions",
-    description: "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
+    description:
+      "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
     images: [
       {
         url: "/LOGO/PNG.png",
         width: 1200,
         height: 630,
         alt: "Signage World Logo",
-      }
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Signage World | Custom Premium Signage & Fabrication Solutions",
-    description: "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
+    description:
+      "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
     images: ["/LOGO/PNG.png"],
   },
   verification: {
@@ -60,43 +64,43 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Signage World",
-    "image": `${SITE_URL}/LOGO/SVG.svg`,
+    name: "Signage World",
+    image: `${SITE_URL}/LOGO/SVG.svg`,
     "@id": `${SITE_URL}/#localbusiness`,
-    "url": SITE_URL,
-    "telephone": "+918295567765",
-    "priceRange": "$$",
-    "address": {
+    url: SITE_URL,
+    telephone: "+918295567765",
+    priceRange: "$$",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "Shop No. 1337, Police Choki, Mohalla Sainiyan",
-      "addressLocality": "Hisar",
-      "addressRegion": "Haryana",
-      "postalCode": "125001",
-      "addressCountry": "IN"
+      streetAddress: "Shop No. 1337, Police Choki, Mohalla Sainiyan",
+      addressLocality: "Hisar",
+      addressRegion: "Haryana",
+      postalCode: "125001",
+      addressCountry: "IN",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": 29.1559995,
-      "longitude": 75.7321473
+      latitude: 29.1559995,
+      longitude: 75.7321473,
     },
-    "openingHoursSpecification": {
+    openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
+      dayOfWeek: [
         "Monday",
         "Tuesday",
         "Wednesday",
         "Thursday",
         "Friday",
-        "Saturday"
+        "Saturday",
       ],
-      "opens": "09:30",
-      "closes": "19:00"
+      opens: "09:30",
+      closes: "19:00",
     },
-    "sameAs": [
+    sameAs: [
       "https://www.facebook.com/profile.php?id=61591724292280",
       "https://www.instagram.com/signageworldhisar/",
-      "https://www.youtube.com/channel/UC8Fsqw2_Q5YRmkqKuWCbbZA"
-    ]
+      "https://www.youtube.com/channel/UC8Fsqw2_Q5YRmkqKuWCbbZA",
+    ],
   };
 
   return (
@@ -106,7 +110,10 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-white text-charcoal font-sans" suppressHydrationWarning>
+      <body
+        className="min-h-full flex flex-col bg-white text-charcoal font-sans"
+        suppressHydrationWarning
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

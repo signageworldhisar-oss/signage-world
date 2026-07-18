@@ -46,7 +46,7 @@ export default function MapSection() {
           </div>
 
           {/* Details Card */}
-          <div className="lg:col-span-4 flex flex-col justify-between p-3 sm:p-8 bg-surface-light border border-border-light rounded-2xl shadow-sm">
+          <div className="lg:col-span-4 flex flex-col justify-between p-3 sm:p-6 xl:p-8 bg-surface-light border border-border-light rounded-2xl shadow-sm">
             <div>
               <h3 className="text-lg font-bold text-charcoal mb-6 pb-4 border-b border-border-light flex items-center gap-2">
                 <svg

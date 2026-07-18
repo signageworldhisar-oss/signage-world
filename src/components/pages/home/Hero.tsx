@@ -104,7 +104,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-25 sm:pt-28 pb-16 flex items-center overflow-hidden bg-charcoal"
+      className="relative min-h-screen pt-25 sm:pt-28 flex flex-col justify-between overflow-hidden bg-charcoal"
     >
       {/* Background Image Carousel (Full Screen & Highly Visible) */}
       <div className="absolute inset-0 z-0">
@@ -129,7 +129,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Content (Left-aligned Overlay matching screenshot format) */}
-      <div className="max-w-7xl mx-auto px-4 md:px-12 w-full relative z-10 flex flex-col items-start text-left">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 w-full relative z-10 flex-1 flex flex-col justify-center items-start text-left py-8 sm:py-12">
         {/* Left-Aligned Heading */}
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-4 sm:mb-6 max-w-4xl animate-fade-in-up">
           Custom Signage Solutions That Make Your{" "}
@@ -183,7 +183,7 @@ export default function Hero() {
         </div>
       </div>
       {/* Trust Badges Bar (Bottom Visual Transition Anchor) */}
-      <div className="absolute bottom-0 left-0 right-0 py-6 bg-white border-t border-border-light z-10 shadow-lg">
+      <div className="relative w-full py-6 bg-white border-t border-border-light z-10 shadow-lg">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustBadges.map((badge, index) => (
