@@ -36,11 +36,11 @@
 ✅ **Day 4 – Domain & Production Setup**
 * **Status:** Completed
 * **Tasks:**
-  * [x] Connect Vercel (Deployed to https://signage-world.vercel.app)
+  * [x] Connect Vercel (Deployed to https://www.signageworldhisar.com & https://signage-world.vercel.app)
   * [x] SSL (Automatically managed by Vercel)
   * [x] Production deployment
-  * [ ] Purchase domain (Pending custom domain pointing)
-  * [ ] Business email setup
+  * [x] Purchase domain (https://www.signageworldhisar.com)
+  * [x] Business email setup
 
 ✅ **Day 5 – Technical SEO**
 * **Status:** Completed
@@ -57,7 +57,7 @@
 ✅ **Day 6 – Google & Analytics**
 * **Status:** Completed
 * **Tasks:**
-  * [x] Google Search Console (Verification tag mM3NUIM6Lop7dqOevvMkXouYy5Z-ZDixH2lf40Yn428 active)
+  * [x] Google Search Console (Sitemap /sitemap.xml submitted & 10 pages discovered with Status: Success)
   * [x] Google Analytics 4 (GA4 tag G-9E6RZQR9K2 integrated and active)
   * [x] Microsoft Clarity (Clarity tag xo9r77xkr0 integrated and active)
   * [ ] Tag Manager
@@ -77,32 +77,32 @@
 🔴 **Day 8 – Local SEO**
 * **Status:** Pending
 * **Tasks:**
-  * [ ] Justdial
+  * [/] Justdial (In Progress)
   * [ ] IndiaMART
   * [ ] Sulekha
   * [ ] Bing Places
   * [ ] Apple Business Connect
   * [ ] NAP consistency
 
-🔴 **Day 9 – QA & Performance**
-* **Status:** Pending
+✅ **Day 9 – QA & Performance**
+* **Status:** Completed
 * **Tasks:**
-  * [ ] Mobile testing
-  * [ ] Desktop testing
-  * [ ] Lighthouse optimization
-  * [ ] Image optimization
-  * [ ] Fix lint issues
-  * [ ] Cross-browser testing
+  * [x] Mobile testing
+  * [x] Desktop testing
+  * [x] Lighthouse optimization
+  * [x] Image optimization
+  * [x] Fix lint issues
+  * [x] Cross-browser testing
 
-🔴 **Day 10 – Launch**
-* **Status:** Pending
+✅ **Day 10 – Launch**
+* **Status:** Completed
 * **Tasks:**
-  * [ ] Final QA
-  * [ ] Domain live
-  * [ ] Sitemap submission
-  * [ ] Search Console indexing
-  * [ ] Google Business linking
-  * [ ] Production release
+  * [x] Final QA
+  * [x] Domain live (https://www.signageworldhisar.com)
+  * [x] Sitemap submission (/sitemap.xml submitted & verified in GSC)
+  * [x] Search Console indexing (10 pages discovered - Success)
+  * [x] Google Business linking
+  * [x] Production release
 
 🔴 **Day 11–30 – Post Launch SEO**
 * **Status:** Pending
