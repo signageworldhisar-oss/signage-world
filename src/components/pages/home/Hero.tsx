@@ -185,11 +185,11 @@ export default function Hero() {
       {/* Trust Badges Bar (Bottom Visual Transition Anchor) */}
       <div className="relative w-full py-6 bg-white border-t border-border-light z-10 shadow-lg">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4 sm:gap-6">
             {trustBadges.map((badge, index) => (
               <div
                 key={index}
-                className="flex gap-3 hover:translate-x-1 transition-all duration-200 justify-center sm:justify-start"
+                className="flex gap-3 hover:translate-x-1 transition-all duration-200 w-full justify-start"
               >
                 <div className="mt-0.5 shrink-0 bg-accent/10 w-9 h-9 rounded-lg flex items-center justify-center">
                   {badge.icon}
