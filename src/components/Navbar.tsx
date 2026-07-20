@@ -29,9 +29,16 @@ export default function Navbar() {
     }
 
     const sections = ["why-choose-us", "services", "process", "reviews"];
+
+    const handleScroll = () => {
+      if (window.scrollY < 150) {
+        setActiveSection("");
+      }
+    };
+
     const observerOptions = {
       root: null,
-      rootMargin: "-25% 0px -55% 0px", // Centered viewport trigger
+      rootMargin: "-20% 0px -50% 0px",
       threshold: 0,
     };
 
@@ -48,11 +55,15 @@ export default function Navbar() {
       if (el) observer.observe(el);
     });
 
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
     return () => {
       sections.forEach((id) => {
         const el = document.getElementById(id);
         if (el) observer.unobserve(el);
       });
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [pathname]);
 
@@ -127,7 +138,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu button */}
-        <button
+        <button              
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden text-charcoal focus:outline-none p-1.5 rounded-lg hover:bg-charcoal/5 transition-colors"
           aria-label="Toggle navigation menu"
@@ -147,7 +158,7 @@ export default function Navbar() {
                 d="M6 18L18 6M6 6l12 12"
               />
             ) : (
-              <path
+<path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
@@ -160,7 +171,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed top-[61px] left-0 right-0 bg-white border-t border-border-light shadow-xl p-6 transition-all duration-300 lg:hidden origin-top ${
+        className={`fixed top-15.25 left-0 right-0 bg-white border-t border-border-light shadow-xl p-6 transition-all duration-300 lg:hidden origin-top ${
           isOpen
             ? "opacity-100 translate-y-0 scale-y-100"
             : "opacity-0 -translate-y-4 scale-y-0 pointer-events-none"
