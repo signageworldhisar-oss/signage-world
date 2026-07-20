@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     images: ["/LOGO/PNG.png"],
   },
   verification: {
-    google: "mM3NUIM6Lop7dqOevvMkXouYy5Z-ZDixH2lf40Yn428",
+    google: "Tlu1rn47FIvhcQ3aZRFainn-NnaOgh38j3xNRNNW-y4",
   },
 };
 
