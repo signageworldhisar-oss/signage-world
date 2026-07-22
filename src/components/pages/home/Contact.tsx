@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import { PHONE_DISPLAY, PHONE_TEL, getWhatsAppLink } from "@/lib/constants";
+import { PHONE_DISPLAY, PHONE_TEL, getWhatsAppLink, MAPS_URL } from "@/lib/constants";
 
 // Pre-filled WhatsApp templates
 
@@ -89,8 +89,8 @@ const contactDetails = [
       </svg>
     ),
     label: "Workshop",
-    value: "Mohalla Sainiyan, Hisar, Haryana",
-    href: "#location",
+    value: "Shop No. 1337, Police Choki, Mohalla Sainiyan, Hisar, Haryana — 125001",
+    href: MAPS_URL,
   },
 ];
 
@@ -192,6 +192,8 @@ export default function Contact() {
                       {item.href ? (
                         <a
                           href={item.href}
+                          target={item.href.startsWith("http") ? "_blank" : undefined}
+                          rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                           className="text-sm font-semibold text-white hover:text-accent transition-colors duration-200"
                         >
                           {item.value}

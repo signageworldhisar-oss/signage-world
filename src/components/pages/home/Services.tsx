@@ -15,7 +15,6 @@ import {
   IconLEDBoard,
   IconAcrylicSignage,
   IconACPBoard,
-  IconVehicleWrap,
   IconGlowSign,
 } from "@/components/icons";
 
@@ -31,9 +30,8 @@ export default function Services() {
       image: "/images/flex-printing.jpeg",
       images: [
         "/images/flex-printing.jpeg",
-        "/images/flex-work.jpeg",
-        "/images/project-18.jpeg",
-        "/images/shop-flex-board.jpeg"
+        "/images/shop-flex-board.jpeg",
+        "/images/shop-front-board.jpeg"
       ],
       icon: <IconFlexPrinting className="w-5 h-5 text-accent" />,
     },
@@ -52,10 +50,11 @@ export default function Services() {
       icon: <IconLEDBoard className="w-5 h-5 text-accent" />,
     },
     {
-      title: "Acrylic signage",
+      title: "Premium Acrylic Name Plates",
       slug: "acrylic-signage",
+      category: "ACRYLIC NAME PLATES",
       description:
-        "Laser-cut premium solid acrylic letters, logo plaques, and corporate signs. Elegant design ideal for receptions, boardrooms, and indoor branding.",
+        "Premium custom acrylic name plates designed for offices, homes, apartments, cabins, reception areas, clinics, and commercial spaces. Manufactured using high-quality laser-cut acrylic with elegant finishes, precise detailing, and long-lasting durability for a professional appearance.",
       image: "/images/name-plate.jpeg",
       images: [
         "/images/name-plate.jpeg",
@@ -79,20 +78,7 @@ export default function Services() {
       ],
       icon: <IconACPBoard className="w-5 h-5 text-accent" />,
     },
-    {
-      title: "Vehicle wraps",
-      slug: "vehicle-wraps",
-      description:
-        "Custom high-quality vinyl wrapping for commercial fleets, delivery vehicles, and cars. Turn your vehicles into mobile billboards with weather-proof branding.",
-      image: "/images/project-1.jpeg",
-      images: [
-        "/images/project-1.jpeg",
-        "/images/project-23.jpeg",
-        "/images/project-18.jpeg",
-        "/images/flex-work.jpeg"
-      ],
-      icon: <IconVehicleWrap className="w-5 h-5 text-accent" />,
-    },
+
     {
       title: "Glow signs",
       slug: "glow-signs",
@@ -124,7 +110,7 @@ export default function Services() {
             <h2 className="text-2xl md:text-4xl font-extrabold text-charcoal tracking-tight mt-4 mb-4">
               Complete Signage & Fabrication Services
             </h2>
-            <p className="text-sm max-w-[600px] md:text-lg text-muted leading-relaxed">
+            <p className="text-sm max-w-150 md:text-lg text-muted leading-relaxed">
               We help businesses create a strong visual presence with durable,
               professionally crafted signage solutions.
             </p>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Button from "@/components/Button";
 import Link from "next/link";
@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
   const pathname = usePathname();
 
   const navLinks = [
@@ -22,58 +21,12 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
-  useEffect(() => {
-    if (pathname !== "/") {
-      setActiveSection("");
-      return;
-    }
-
-    const sections = ["why-choose-us", "services", "process", "reviews"];
-
-    const handleScroll = () => {
-      if (window.scrollY < 150) {
-        setActiveSection("");
-      }
-    };
-
-    const observerOptions = {
-      root: null,
-      rootMargin: "-20% 0px -50% 0px",
-      threshold: 0,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    return () => {
-      sections.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) observer.unobserve(el);
-      });
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [pathname]);
-
   const isActive = (href: string) => {
-    if (href.startsWith("/#")) {
-      const id = href.replace("/#", "");
-      return pathname === "/" && activeSection === id;
+    if (href.includes("#")) {
+      return false;
     }
     if (href === "/") {
-      return pathname === "/" && activeSection === "";
+      return pathname === "/";
     }
     return pathname === href;
   };

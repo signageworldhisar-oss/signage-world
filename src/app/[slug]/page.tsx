@@ -12,7 +12,6 @@ export function generateStaticParams() {
     { slug: "led-boards" },
     { slug: "acrylic-signage" },
     { slug: "acp-boards" },
-    { slug: "vehicle-wraps" },
     { slug: "glow-signs" },
   ];
 }

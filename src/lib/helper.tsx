@@ -3,7 +3,6 @@ import {
   IconLEDBoard,
   IconAcrylicSignage,
   IconACPBoard,
-  IconVehicleWrap,
   IconGlowSign
 } from "@/components/icons";
 
@@ -53,8 +52,8 @@ export const serviceDetails: Record<string, ServiceData> = {
     ],
     gallery: [
       "/images/flex-printing.jpeg",
-      "/images/flex-work.jpeg",
-      "/images/project-18.jpeg"
+      "/images/shop-flex-board.jpeg",
+      "/images/shop-front-board.jpeg"
     ]
   },
   "led-boards": {
@@ -88,14 +87,17 @@ export const serviceDetails: Record<string, ServiceData> = {
       "/images/project-18.jpeg",
       "/images/project-20.jpeg",
       "/images/project-17.jpeg",
-      "/images/project-22.jpeg"
+      "/images/project-22.jpeg",
+      "/images/om-estates.jpeg",
+      "/images/taneja-properties.jpeg",
+      "/images/suncity-cinemas.jpeg"
     ]
   },
   "acrylic-signage": {
-    title: "Acrylic Signage",
-    subtitle: "Premium Acrylic Signage for Modern Branding",
-    pdfText: "Enhance your business image with sleek, durable, and professional acrylic signs.",
-    extendedDescription: "Create a modern, sophisticated aesthetic with laser-cut solid acrylic letters and logo plaques. Ideal for upscale receptions, boardrooms, retail interiors, and prestige corporate headquarters, acrylic signage provides a clean, glassy finish that speaks of quality.",
+    title: "Premium Acrylic Name Plates",
+    subtitle: "Premium Custom Acrylic Name Plates for Homes & Offices",
+    pdfText: "Premium custom acrylic name plates designed for offices, homes, apartments, cabins, reception areas, clinics, and commercial spaces.",
+    extendedDescription: "Premium custom acrylic name plates designed for offices, homes, apartments, cabins, reception areas, clinics, and commercial spaces. Manufactured using high-quality laser-cut acrylic with elegant finishes, precise detailing, and long-lasting durability for a professional appearance.",
     image: "/images/name-plate.jpeg",
     icon: <IconAcrylicSignage className="w-8 h-8 text-accent" />,
     features: [
@@ -120,9 +122,10 @@ export const serviceDetails: Record<string, ServiceData> = {
     ],
     gallery: [
       "/images/name-plate.jpeg",
-      "/images/project-11.jpeg",
-      "/images/project-13.jpeg",
-      "/images/project-15.jpeg"
+      "/images/name-plate-2.jpeg",
+      "/images/name-plate-4.jpeg",
+      "/images/name-plate-3.jpeg",
+      "/images/as-acrylic.jpeg"
     ]
   },
   "acp-boards": {
@@ -157,40 +160,9 @@ export const serviceDetails: Record<string, ServiceData> = {
       "/images/acp-work-2.jpeg",
       "/images/acp-work-3.jpeg",
       "/images/acp-work-4.jpeg",
-      "/images/acp-work-5.jpeg"
-    ]
-  },
-  "vehicle-wraps": {
-    title: "Vehicle Wraps",
-    subtitle: "Custom Vehicle Wraps That Advertise Everywhere",
-    pdfText: "Turn your vehicle into a moving advertisement with premium custom vehicle wraps.",
-    extendedDescription: "Turn your business cars, delivery vans, and commercial fleet into moving billboards. We utilize premium cast wrapping vinyl films with protective UV laminate overlays to ensure your branding stays vibrant and bubble-free for years while protecting the underlying vehicle paint.",
-    image: "/images/project-1.jpeg",
-    icon: <IconVehicleWrap className="w-8 h-8 text-accent" />,
-    features: [
-      "Premium Cast Wrapping Vinyl Material",
-      "UV Protective Gloss/Matte Laminate Overlays",
-      "Precise Vehicle Template Contour Fitting",
-      "Removable Adhesive (Protects Original Paint)",
-      "High-Resolution Eco-Solvent Photo Prints",
-    ],
-    specifications: {
-      material: "Avery Dennison / 3M cast wrapping films (or equivalent premium vinyl)",
-      laminate: "Matching cast protective UV filter clear laminate layer",
-      application: "Dry or wet professional wrap installation by certified crew",
-      lifespan: "3 to 5 years outdoor lifespan against peeling or color fading",
-    },
-    applications: [
-      "Commercial Fleet Branding",
-      "Delivery Van & Truck Full/Half Wraps",
-      "Company Car Door Logos & Decals",
-      "Food Truck Visual Wrap Graphics",
-      "Public Transit Bus Wraps",
-    ],
-    gallery: [
-      "/images/project-1.jpeg",
-      "/images/project-23.jpeg",
-      "/images/project-18.jpeg"
+      "/images/acp-work-5.jpeg",
+      "/images/fresh-n-fold.jpeg",
+      "/images/tirupati-dham.jpeg"
     ]
   },
   "glow-signs": {

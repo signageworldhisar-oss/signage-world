@@ -1,4 +1,4 @@
-import { PHONE_TEL, PHONE_DISPLAY } from "@/lib/constants";
+import { PHONE_TEL, PHONE_DISPLAY, MAPS_URL, ADDRESS } from "@/lib/constants";
 
 export default function WorkshopLocation() {
   return (
@@ -23,8 +23,14 @@ export default function WorkshopLocation() {
             <div>
               <h4 className="text-[13px] font-black text-charcoal uppercase tracking-wider">Address</h4>
               <p className="text-sm text-muted mt-1 leading-relaxed">
-                Shop No. 1337, Police Choki, Mohalla Sainiyan,<br />
-                Hisar, Haryana — 125001
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
+                  {ADDRESS}
+                </a>
               </p>
             </div>
           </div>

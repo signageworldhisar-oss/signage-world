@@ -8,7 +8,6 @@ const SIGNAGE_OPTIONS = [
   { value: "acp-boards", label: "ACP Board / Facade Cladding" },
   { value: "acrylic-signage", label: "Acrylic Signage / 3D Letters" },
   { value: "flex-printing", label: "Flex Printing / Banner" },
-  { value: "vehicle-wraps", label: "Vehicle Wrap / Fleet Branding" },
   { value: "glow-signs", label: "Glow Sign / Lightbox" },
   { value: "other", label: "Other Metal or Fabrication Work" },
 ];

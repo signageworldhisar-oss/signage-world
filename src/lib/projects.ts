@@ -350,6 +350,48 @@ export const projects = [
     image: "/images/pvc-work.jpeg",
     featured: false,
   },
+  {
+    id: 57,
+    title: "Fresh N Fold Laundry ACP Shopfront",
+    category: "acp",
+    image: "/images/fresh-n-fold.jpeg",
+    featured: false,
+  },
+  {
+    id: 58,
+    title: "Om Estates 3D LED Entrance Gate Sign",
+    category: "led",
+    image: "/images/om-estates.jpeg",
+    featured: true,
+  },
+  {
+    id: 59,
+    title: "Taneja Properties Rooftop LED Board",
+    category: "led",
+    image: "/images/taneja-properties.jpeg",
+    featured: false,
+  },
+  {
+    id: 60,
+    title: "Custom Gold Mirror 3D Acrylic Letters",
+    category: "acrylic",
+    image: "/images/as-acrylic.jpeg",
+    featured: false,
+  },
+  {
+    id: 61,
+    title: "Shree Tirupati Dham Gold Entrance Gate ACP Sign",
+    category: "acp",
+    image: "/images/tirupati-dham.jpeg",
+    featured: false,
+  },
+  {
+    id: 62,
+    title: "Suncity Cinemas Halo Backlit LED Board",
+    category: "led",
+    image: "/images/suncity-cinemas.jpeg",
+    featured: true,
+  },
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+
 
 export interface ServiceItem {
   title: string;
@@ -8,6 +8,7 @@ export interface ServiceItem {
   description: string;
   image: string;
   images?: string[];
+  category?: string;
 }
 
 interface ServiceCardProps {
@@ -15,47 +16,28 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service }: ServiceCardProps) {
-  const slideshowImages = service.images && service.images.length > 0
-    ? service.images
-    : [service.image];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    if (slideshowImages.length <= 1) return;
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % slideshowImages.length);
-    }, 3500);
-    return () => clearInterval(interval);
-  }, [slideshowImages]);
-
   return (
     <div
       className="bg-white rounded-xl border border-border-light shadow-sm hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col justify-between h-full"
     >
       {/* Visual Card Image Header */}
       <Link href={`/${service.slug}`} className="relative h-52 sm:h-52 w-full overflow-hidden bg-charcoal block">
-        {slideshowImages.map((imgSrc, index) => (
-          <Image
-            key={index}
-            src={imgSrc}
-            alt={service.title}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className={`object-cover transition-opacity duration-1000 absolute inset-0 ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
+        <Image
+          src={service.image}
+          alt={service.title}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-cover absolute inset-0"
+        />
         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300"></div>
       </Link>
 
       {/* Card content and detail info */}
-      <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow">
+      <div className="p-4 sm:p-5 flex flex-col justify-between grow">
         <div>
           {/* Tag and Rating stars inline */}
           <div className="flex items-center justify-between mb-1 sm:mb-3 text-xs font-bold text-accent uppercase tracking-wider">
-            <span>{service.title.split(" ")[0]} Product</span>
+            <span>{service.category ?? `${service.title.split(" ")[0]} Product`}</span>
             <div className="flex gap-0.5 text-amber-500">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="w-3 h-3 fill-current" viewBox="0 0 20 20">
@@ -73,7 +55,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           </Link>
 
           {/* Description */}
-          <p className="text-xs text-muted leading-relaxed font-normal mb-2 sm:mb-4">
+          <p className="text-xs text-muted leading-relaxed font-normal mb-2 sm:mb-4 line-clamp-3">
             {service.description}
           </p>
         </div>

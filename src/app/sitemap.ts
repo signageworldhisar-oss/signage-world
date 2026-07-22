@@ -8,7 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/led-boards",
     "/acrylic-signage",
     "/acp-boards",
-    "/vehicle-wraps",
     "/glow-signs",
   ];
 

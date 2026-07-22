@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PHONE_DISPLAY, PHONE_TEL, getWhatsAppLink } from "@/lib/constants";
+import { PHONE_DISPLAY, PHONE_TEL, getWhatsAppLink, MAPS_URL } from "@/lib/constants";
 
 export default function WorkshopCTA() {
   const whatsappLink = getWhatsAppLink(
@@ -34,7 +34,15 @@ export default function WorkshopCTA() {
                 <div>
                   <p className="text-xs font-black text-charcoal uppercase tracking-wider mb-1">Address</p>
                   <p className="text-sm text-muted leading-relaxed">
-                    Shop No. 1337, Police Choki, Mohalla Sainiyan,<br />Hisar, Haryana — 125001
+                    <a
+                      href={MAPS_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent transition-colors"
+                    >
+                      Shop No. 1337, Police Choki, Mohalla Sainiyan,<br />
+                      Hisar, Haryana — 125001
+                    </a>
                   </p>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { PHONE_TEL, PHONE_DISPLAY } from "@/lib/constants";
+import { PHONE_TEL, PHONE_DISPLAY, MAPS_URL } from "@/lib/constants";
 
 export default function Footer() {
   const quickLinks = [
@@ -21,7 +21,6 @@ export default function Footer() {
     { name: "Glow Sign Boards", href: "/glow-signs" },
     { name: "Metal Letter Signage", href: "/#services" },
     { name: "Fabrication Works", href: "/#services" },
-    { name: "Vinyl Graphics & Branding", href: "/vehicle-wraps" },
   ];
 
   const socialLinks = [
@@ -110,7 +109,7 @@ export default function Footer() {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-sm text-white/60 hover:text-white transition-colors duration-200"
+                  className="text-sm text-white/60 hover:text-accent transition-colors duration-200"
                 >
                   {link.name}
                 </a>
@@ -129,7 +128,7 @@ export default function Footer() {
               <li key={idx}>
                 <a
                   href={link.href}
-                  className="text-sm text-white/60 hover:text-white transition-colors duration-200"
+                  className="text-sm text-white/60 hover:text-accent transition-colors duration-200"
                 >
                   {link.name}
                 </a>
@@ -163,8 +162,16 @@ export default function Footer() {
                   Main Workshop
                 </h5>
                 <p className="text-xs text-white/60 mt-1 leading-relaxed">
-                  Shop No. 1337, Police Choki, Mohalla Sainiyan,
-                  Hisar, Haryana — 125001
+                  <a
+                    href={MAPS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    Shop No. 1337, Police Choki, Mohalla Sainiyan,
+                    <br />
+                    Hisar, Haryana — 125001
+                  </a>
                 </p>
               </div>
             </li>
@@ -187,7 +194,7 @@ export default function Footer() {
                   Helpline
                 </h5>
                 <p className="text-xs text-white/60 mt-1 leading-relaxed">
-                  <a href={PHONE_TEL} className="hover:text-white">
+                  <a href={PHONE_TEL} className="hover:text-accent transition-colors duration-200">
                     {PHONE_DISPLAY}
                   </a>
                 </p>
@@ -219,7 +226,7 @@ export default function Footer() {
             href="https://innovaft.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-white/50 hover:text-accent transition-colors inline-flex items-center gap-0.5 hover:underline"
+            className="font-extrabold text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-0.5 hover:underline"
           >
             Innovaft
             <svg className="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">

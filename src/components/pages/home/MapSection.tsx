@@ -1,11 +1,10 @@
 "use client";
 
 import Button from "@/components/Button";
-import { PHONE_TEL, PHONE_DISPLAY } from "@/lib/constants";
+import { PHONE_TEL, PHONE_DISPLAY, ADDRESS, MAPS_EMBED_URL } from "@/lib/constants";
 
 export default function MapSection() {
-  const address =
-    "Shop No. 1337, Police Choki, Mohalla Sainiyan, Hisar, Haryana — 125001";
+  const address = ADDRESS;
 
   return (
     <section
@@ -31,9 +30,9 @@ export default function MapSection() {
         {/* Map & Card Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Google Map Iframe */}
-          <div className="lg:col-span-8 min-h-[350px] md:min-h-[450px] rounded-2xl overflow-hidden shadow-md border border-border-light relative">
+          <div className="lg:col-span-8 min-h-87.5 md:min-h-112.5 rounded-2xl overflow-hidden shadow-md border border-border-light relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.2942671224996!2d75.72957236120904!3d29.15599954647558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391233acca8096e3%3A0xc26b159b79726001!2sA%20ONE%20GRAPHIC!5e0!3m2!1sen!2sin!4v1782819330496!5m2!1sen!2sin"
+              src={MAPS_EMBED_URL}
               width="100%"
               height="100%"
               style={{ border: 0 }}
