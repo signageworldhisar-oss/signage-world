@@ -52,8 +52,7 @@ export const serviceDetails: Record<string, ServiceData> = {
     ],
     gallery: [
       "/images/flex-printing.jpeg",
-      "/images/shop-flex-board.jpeg",
-      "/images/shop-front-board.jpeg"
+      "/images/shop-flex-board.jpeg"
     ]
   },
   "led-boards": {

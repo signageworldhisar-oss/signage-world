@@ -11,6 +11,8 @@ import "swiper/css/navigation";
 
 export default function Reviews() {
   const [swiper, setSwiper] = useState<any>(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
   const testimonials = [
     {
@@ -72,7 +74,8 @@ export default function Reviews() {
             {/* Prev Button */}
             <button
               onClick={() => swiper?.slidePrev()}
-              className="w-12 h-12 rounded-full bg-white border border-border-light flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white text-charcoal shadow-md transition-all duration-200 cursor-pointer"
+              disabled={isBeginning}
+              className="w-12 h-12 rounded-full bg-white border border-border-light flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white text-charcoal shadow-md transition-all duration-200 cursor-pointer disabled:opacity-30 disabled:pointer-events-none disabled:cursor-not-allowed"
               aria-label="Previous testimonial"
             >
               <svg
@@ -93,7 +96,8 @@ export default function Reviews() {
             {/* Next Button */}
             <button
               onClick={() => swiper?.slideNext()}
-              className="w-12 h-12 rounded-full bg-white border border-border-light flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white text-charcoal shadow-md transition-all duration-200 cursor-pointer"
+              disabled={isEnd}
+              className="w-12 h-12 rounded-full bg-white border border-border-light flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white text-charcoal shadow-md transition-all duration-200 cursor-pointer disabled:opacity-30 disabled:pointer-events-none disabled:cursor-not-allowed"
               aria-label="Next testimonial"
             >
               <svg
@@ -128,11 +132,19 @@ export default function Reviews() {
             {/* Testimonial Active Slide */}
             <div className="relative z-10 w-full overflow-hidden">
               <Swiper
-                onSwiper={setSwiper}
+                onSwiper={(swiperInstance) => {
+                  setSwiper(swiperInstance);
+                  setIsBeginning(swiperInstance.isBeginning);
+                  setIsEnd(swiperInstance.isEnd);
+                }}
+                onSlideChange={(swiperInstance) => {
+                  setIsBeginning(swiperInstance.isBeginning);
+                  setIsEnd(swiperInstance.isEnd);
+                }}
                 modules={[Autoplay, Pagination]}
                 spaceBetween={20}
                 slidesPerView={1}
-                loop={true}
+                loop={false}
                 autoplay={{
                   delay: 6000,
                   disableOnInteraction: false,

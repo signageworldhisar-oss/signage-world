@@ -33,10 +33,10 @@ export default function Navbar() {
 
   const getLinkClass = (href: string) => {
     const active = isActive(href);
-    return `text-[15px] font-medium transition-colors duration-250 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 ${
+    return `text-[15px] font-medium transition-colors duration-250 relative group after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-accent after:transition-transform after:duration-300 ${
       active
-        ? "text-accent after:w-full"
-        : "text-charcoal/80 hover:text-accent after:w-0 hover:after:w-full"
+        ? "text-accent after:scale-x-100"
+        : "text-charcoal/80 hover:text-accent after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left"
     }`;
   };
 
@@ -73,7 +73,14 @@ export default function Navbar() {
               href={link.href}
               className={getLinkClass(link.href)}
             >
-              {link.name}
+              <span className="relative block overflow-hidden h-[22px] leading-[22px]">
+                <span className="block transition-transform duration-300 transform group-hover:-translate-y-full">
+                  {link.name}
+                </span>
+                <span className="block absolute top-0 left-0 transition-transform duration-300 transform translate-y-full group-hover:translate-y-0 text-accent">
+                  {link.name}
+                </span>
+              </span>
             </a>
           ))}
         </nav>

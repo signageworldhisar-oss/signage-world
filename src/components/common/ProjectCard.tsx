@@ -24,8 +24,11 @@ export default function ProjectCard({
   return (
     <div
       onClick={onClick}
-      className="group relative h-[250px] md:h-[280px] rounded-2xl overflow-hidden shadow-md border border-border-light bg-surface-light transition-all duration-300 hover:shadow-xl cursor-pointer"
+      className="group relative h-62.5 md:h-70 rounded-2xl overflow-hidden shadow-md border border-border-light bg-surface-light transition-all duration-300 hover:shadow-xl cursor-pointer"
     >
+      {/* Hover Border Overlay */}
+      <div className="absolute inset-0 border border-transparent group-hover:border-accent transition-colors duration-300 pointer-events-none rounded-2xl z-20" />
+
       {/* Image */}
       <Image
         src={project.image}

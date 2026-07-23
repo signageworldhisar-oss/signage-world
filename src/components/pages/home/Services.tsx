@@ -20,6 +20,8 @@ import {
 
 export default function Services() {
   const [swiper, setSwiper] = useState<any>(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
   const services = [
     {
@@ -118,7 +120,8 @@ export default function Services() {
           <div className="hidden sm:flex gap-4">
             <button
               onClick={() => swiper?.slidePrev()}
-              className="services-prev w-12 h-12 rounded-full bg-white border border-border-light shadow-md flex items-center justify-center text-charcoal hover:bg-accent hover:text-white hover:border-accent disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
+              disabled={isBeginning}
+              className="services-prev w-12 h-12 rounded-full bg-white border border-border-light shadow-md flex items-center justify-center text-charcoal hover:bg-accent hover:text-white hover:border-accent disabled:opacity-30 disabled:pointer-events-none disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
               aria-label="Previous service"
             >
               <svg
@@ -137,7 +140,8 @@ export default function Services() {
             </button>
             <button
               onClick={() => swiper?.slideNext()}
-              className="services-next w-12 h-12 rounded-full bg-white border border-border-light shadow-md flex items-center justify-center text-charcoal hover:bg-accent hover:text-white hover:border-accent disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
+              disabled={isEnd}
+              className="services-next w-12 h-12 rounded-full bg-white border border-border-light shadow-md flex items-center justify-center text-charcoal hover:bg-accent hover:text-white hover:border-accent disabled:opacity-30 disabled:pointer-events-none disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
               aria-label="Next service"
             >
               <svg
@@ -160,7 +164,15 @@ export default function Services() {
         {/* Services Swiper Container */}
         <div className="relative group/swiper  md:mt-10 px-2 sm:px-4 md:px-0">
           <Swiper
-            onSwiper={setSwiper}
+            onSwiper={(swiperInstance) => {
+              setSwiper(swiperInstance);
+              setIsBeginning(swiperInstance.isBeginning);
+              setIsEnd(swiperInstance.isEnd);
+            }}
+            onSlideChange={(swiperInstance) => {
+              setIsBeginning(swiperInstance.isBeginning);
+              setIsEnd(swiperInstance.isEnd);
+            }}
             modules={[Autoplay, Pagination]}
             spaceBetween={20}
             slidesPerView={1}

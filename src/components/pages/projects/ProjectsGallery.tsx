@@ -76,15 +76,15 @@ export default function ProjectsGallery() {
       {/* Filter + Grid */}
       <div className="max-w-7xl w-full mx-auto px-4 md:px-12 py-6 sm:py-12 md:py-16">
         {/* Filter tabs */}
-        <div className="flex overflow-x-auto justify-start md:justify-center items-center gap-2 mb-5 md:mb-10 pb-2.5 w-full">
+        <div className="flex overflow-x-auto no-scrollbar justify-start md:justify-center items-center gap-4 sm:gap-2 mb-5 md:mb-10 pb-2.5 w-full">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => handleFilterChange(cat.id)}
-              className={`px-5 py-2.5 flex-none rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer ${
+              className={`flex-none text-sm font-semibold transition-all duration-200 cursor-pointer px-2 pb-1.5 pt-1 rounded-none bg-transparent border-t-0 border-x-0 border-b-2 ${
                 activeFilter === cat.id
-                  ? "bg-accent text-white shadow-md shadow-accent/20 border border-transparent"
-                  : "bg-surface-light text-muted hover:text-charcoal border border-border-light hover:bg-border-light/30"
+                  ? "text-accent border-accent sm:bg-accent sm:text-white sm:shadow-md sm:shadow-accent/20 sm:border-0 sm:px-5 sm:py-2.5 sm:rounded-full"
+                  : "text-muted hover:text-charcoal border-transparent sm:bg-surface-light sm:border sm:border-border-light sm:hover:bg-border-light/30 sm:px-5 sm:py-2.5 sm:rounded-full"
               }`}
             >
               {cat.name}

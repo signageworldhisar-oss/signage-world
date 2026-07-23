@@ -30,7 +30,7 @@ export default function Button({
   rel,
 }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center font-bold text-center transition-all duration-250 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center font-bold text-center transition-all duration-250 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed group/btn";
 
   const sizeClasses = {
     sm: "text-sm py-2.5 px-6",
@@ -60,17 +60,39 @@ export default function Button({
 
   const combinedClasses = `${baseClasses} ${sizeClasses[size]} ${roundedClasses[rounded]} ${variantClasses[variant]} ${className}`;
 
+  const content = React.Children.map(children, (child) => {
+    if (typeof child === "string" || typeof child === "number") {
+      const heightClass =
+        size === "sm"
+          ? "h-[20px] leading-[20px]"
+          : size === "md"
+            ? "h-[24px] leading-[24px]"
+            : "h-[28px] leading-[28px]";
+      return (
+        <span className={`relative block overflow-hidden ${heightClass}`}>
+          <span className="block transition-transform duration-300 transform group-hover/btn:-translate-y-full">
+            {child}
+          </span>
+          <span className="block absolute top-0 left-0 w-full transition-transform duration-300 transform translate-y-full group-hover/btn:translate-y-0">
+            {child}
+          </span>
+        </span>
+      );
+    }
+    return child;
+  });
+
   if (href) {
     return (
       <a href={href} onClick={onClick} className={combinedClasses} target={target} rel={rel}>
-        {children}
+        {content}
       </a>
     );
   }
 
   return (
     <button type={type} onClick={onClick} disabled={disabled} className={combinedClasses}>
-      {children}
+      {content}
     </button>
   );
 }
