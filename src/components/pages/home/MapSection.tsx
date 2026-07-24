@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import { PHONE_TEL, PHONE_DISPLAY, ADDRESS, MAPS_EMBED_URL } from "@/lib/constants";
+import { PHONE_TEL, PHONE_DISPLAY, ADDRESS, MAPS_EMBED_URL, MAPS_URL } from "@/lib/constants";
 
 export default function MapSection() {
   const address = ADDRESS;
@@ -162,7 +162,7 @@ export default function MapSection() {
 
             <div className="mt-8 border-t border-border-light pt-6">
               <Button
-                href="https://www.google.com/maps/place/A+ONE+GRAPHIC/@29.1559995,75.7295724,17z/data=!3m1!4b1!4m6!3m5!1s0x391233acca8096e3:0xc26b159b79726001!8m2!3d29.1559995!4d75.7321473!16s%2Fg%2F11g9y_z0v6"
+                href={MAPS_URL}
                 target="_blank"
                 variant="primary"
                 size="md"

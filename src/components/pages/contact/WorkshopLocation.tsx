@@ -1,4 +1,4 @@
-import { PHONE_TEL, PHONE_DISPLAY, MAPS_URL, ADDRESS } from "@/lib/constants";
+import { PHONE_TEL, PHONE_DISPLAY, MAPS_URL, ADDRESS, MAPS_EMBED_URL } from "@/lib/constants";
 
 export default function WorkshopLocation() {
   return (
@@ -71,7 +71,7 @@ export default function WorkshopLocation() {
       {/* Google Map Embedded iframe */}
       <div className="w-full h-80 rounded-3xl overflow-hidden shadow-lg border border-border-light relative bg-surface-light">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.2942671224996!2d75.72957236120904!3d29.15599954647558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391233acca8096e3%3A0xc26b159b79726001!2sA%20ONE%20GRAPHIC!5e0!3m2!1sen!2sin!4v1782819330496!5m2!1sen!2sin"
+          src={MAPS_EMBED_URL}
           width="100%"
           height="100%"
           style={{ border: 0 }}
