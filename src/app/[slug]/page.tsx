@@ -3,6 +3,7 @@ import { serviceDetails } from "@/lib/helper";
 import ServiceHero from "@/components/pages/service-detail/ServiceHero";
 import ServiceGallery from "@/components/pages/service-detail/ServiceGallery";
 import ServiceSidebar from "@/components/pages/service-detail/ServiceSidebar";
+import ServiceFAQ from "@/components/pages/service-detail/ServiceFAQ";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/constants";
 
@@ -25,13 +26,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: service.title,
+    title: {
+      absolute: `${service.title} | Signage World`
+    },
     description: service.pdfText,
     alternates: {
       canonical: `/${slug}`,
     },
     openGraph: {
-      title: `${service.title} | Signage World Hisar`,
+      title: `${service.title} | Signage World`,
       description: service.pdfText,
       url: `${SITE_URL}/${slug}`,
       images: [
@@ -43,7 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: `${service.title} | Signage World Hisar`,
+      title: `${service.title} | Signage World`,
       description: service.pdfText,
       images: [service.image],
     },
@@ -58,7 +61,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  const jsonLd = {
+  // Service Local Business Schema
+  const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": service.title,
@@ -80,12 +84,32 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     ]
   };
 
+  // FAQ Page Schema
+  const faqJsonLd = service.faqs && service.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
+
   return (
     <main className="min-h-screen bg-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <ServiceHero title={service.title} subtitle={service.subtitle} />
 
       {/* Detail Body Section */}
@@ -107,6 +131,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
+
+      {/* FAQs Section */}
+      <ServiceFAQ faqs={service.faqs} />
     </main>
   );
 }

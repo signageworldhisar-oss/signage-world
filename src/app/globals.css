@@ -90,6 +90,36 @@ section {
   animation: blink 2s infinite ease-in-out;
 }
 
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(255, 91, 0, 0.2);
+    box-shadow: 0 0 6px rgba(255, 91, 0, 0.15);
+  }
+  50% {
+    border-color: rgba(255, 91, 0, 0.7);
+    box-shadow: 0 0 18px rgba(255, 91, 0, 0.5);
+  }
+}
+
+.animate-border-glow {
+  animation: borderGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes badgeGlow {
+  0%, 100% {
+    background-color: rgba(255, 91, 0, 0.15);
+    box-shadow: 0 0 4px rgba(255, 91, 0, 0.3);
+  }
+  50% {
+    background-color: rgba(255, 91, 0, 0.55);
+    box-shadow: 0 0 12px rgba(255, 91, 0, 0.75);
+  }
+}
+
+.animate-badge-glow {
+  animation: badgeGlow 2s infinite ease-in-out;
+}
+
 .section-header {
   @apply text-center max-w-3xl mx-auto mb-5 md:mb-16
 }

@@ -11,9 +11,11 @@ import MapSection from "@/components/pages/home/MapSection";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Signage World | Custom Premium Signage & Fabrication Solutions Hisar",
+    absolute:
+      "Signage World | Custom Premium Signage & Fabrication Solutions Hisar",
   },
-  description: "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
+  description:
+    "High-quality custom signage solutions including ACP sign boards, LED displays, acrylic letters, metal boards, and commercial branding fabrication. Serving retail, office, and business projects in Hisar, Haryana.",
   alternates: {
     canonical: "/",
   },

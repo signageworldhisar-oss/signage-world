@@ -150,7 +150,11 @@ export default function Contact() {
                     href={getWhatsAppLink(action.message)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between gap-3 bg-white/5 hover:bg-accent border border-white/10 hover:border-accent rounded-xl px-5 py-4 transition-all duration-250 group cursor-pointer"
+                    className={`flex items-center justify-between gap-3 bg-white/5 hover:bg-accent border rounded-xl px-5 py-4 transition-all duration-250 group cursor-pointer ${
+                      idx === 0
+                        ? "animate-border-glow border-accent/30"
+                        : "border-white/10 hover:border-accent"
+                    }`}
                   >
                     <div className="flex items-center gap-3">
                       {/* WhatsApp icon */}
@@ -165,7 +169,11 @@ export default function Contact() {
                         {action.label}
                       </span>
                     </div>
-                    <span className="text-[11px] font-bold bg-white/10 group-hover:bg-white/20 text-white/80 group-hover:text-white px-2.5 py-1 rounded-full shrink-0 transition-all duration-200">
+                    <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full shrink-0 transition-all duration-200 ${
+                      idx === 0
+                        ? "animate-badge-glow text-white"
+                        : "bg-white/10 group-hover:bg-white/20 text-white/80 group-hover:text-white"
+                    }`}>
                       {action.tag}
                     </span>
                   </a>
